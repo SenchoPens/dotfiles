@@ -1,0 +1,52 @@
+nonohup() {
+  nohup $@ >/dev/null 2>&1 &
+}
+
+start_pma() {
+  # Start PhpMyAdmin - start nessesary services and open phpMyAdmin in firefox.
+  systemctl start mysql
+  systemctl start apache2
+  firefox 'http://localhost/phpMyAdmin/'
+}
+
+find_string() {
+  grep -rnw . -e $1
+}
+
+pip3_update_all() {
+  sudo pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip3 install -U
+}
+
+tomobi() {
+  ebook-convert $1 .mobi
+}
+
+andro() {
+  jmtpfs /media/mtp/
+  cd /media/mtp/
+}
+
+uandro() {
+  cd ~
+  umount /media/mtp/
+}
+
+kindle() {
+  mount /dev/sdb1 /mnt
+  cd /mnt/documents/
+}
+
+ukindle() {
+  cd ~
+  umount /mnt
+}
+
+weather() {
+  curl "http://wttr.in/$1"
+}
+
+factorio() {
+  cd ~/Games/factorio/bin/x64/
+  ./factorio
+}
+

@@ -1,0 +1,48 @@
+# Sudo aliases
+alias zypper='sudo zypper'
+alias mount='sudo mount'
+alias umount='sudo umount'
+alias fdisk='sudo fdisk'
+
+# Aliases for zsh
+alias reload='source ~/.zshrc'
+
+# Hashes
+hash -d pproj=~/Projects
+hash -d cproj=~/projects
+hash -d qtproj=~/projects/Qt/
+hash -d i3conf=~/.config/i3/
+hash -d viconf=~/.config/nvim/
+hash -d amusic=/media/mtp/sdcard1/Music
+hash -d winda='/home/sencho/VirtualBox VMs/winda/Shared/'
+
+# Aliases for translation
+alias ten='trans :en'
+alias tru='trans :ru'
+
+# Aliases for my progs
+alias pcomf='pcom -f'
+alias tobinf='tobin -n'
+
+# Just aliases
+alias qtcreator='sh /home/sencho/Qt/Tools/QtCreator/bin/qtcreator.sh &'
+alias jpy='nonohup jupyter notebook'
+alias jco='coconut --target 36 --jupyter notebook'
+alias todo='task add'
+alias pipin='pip3 install --user'
+alias rainbow='yes "$(seq 231 -1 16)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .02; done'
+
+# For weather
+alias wmos='weather Moscow'
+
+# Useful command aliases that I always forget
+alias save_targz='tar -czvf'
+alias unpack_targz='tar -xzf'
+
+# Aliases for automated file opening
+alias -s txt=nvim
+alias -s {avi,mkv,mp4}='gmplayer -alang eng,rus,jap -slang eng,rus -ass-border-color 000000FF -ass-color FFD630FF -ass-force-style FontName=Serif -subpos 93'
+alias -s html='firefox'
+alias -s {jpg,jpeg,png,pdf}='nonohup okular'
+alias -s docx='nonohup libreoffice'
+
