@@ -41,6 +41,19 @@ antigen bundle chrissicool/zsh-256color
 
 antigen apply
 
+
+# Cool dot completion
+rationalise-dot() {
+  if [[ $LBUFFER = *.. ]]; then
+    LBUFFER+=/..
+  else
+    LBUFFER+=.
+  fi
+}
+zle -N rationalise-dot
+bindkey . rationalise-dot
+
+
 source ~/.zshrc.d/zsh_al  # load aliases
 source ~/.zshrc.d/zsh_fu  # load functions
 source ~/.zshrc.d/zsh_wtf  # load some fun

@@ -32,6 +32,9 @@ alias todo='task add'
 alias pipin='pip3 install --user'
 alias rainbow='yes "$(seq 231 -1 16)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .02; done'
 
+alias -g L="| less"
+alias -g ED="export DISPLAY=:0.0"
+
 # For weather
 alias wmos='weather Moscow'
 
