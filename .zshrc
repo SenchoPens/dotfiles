@@ -1,15 +1,15 @@
-export PATH=/usr/lib64/mpi/gcc/openmpi/bin:/home/sencho/bin:/usr/local/bin:/usr/bin:/bin:/opt:/home/sencho/.cabal/bin
+export PATH=/usr/lib64/mpi/gcc/openmpi/bin:~/bin:/usr/local/bin:/usr/bin:/bin:/opt:~/.cabal/bin
 
 HISTSIZE=5000
 SAVEHIST=5000
 setopt autocd beep extendedglob
 bindkey -v
 export KEYTIMEOUT=1
-zstyle :compinstall filename '/home/sencho/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 
-source /usr/local/antigen/antigen.zsh
+source /usr/share/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
