@@ -27,9 +27,6 @@ antigen bundle cabal
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Translating bundle.
-antigen bundle soimort/translate-shell
-
 # Hide name.
 DEFAULT_USER=sencho
 
