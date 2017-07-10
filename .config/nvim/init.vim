@@ -4,15 +4,15 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/sencho/.local/share/nvim/repos/github.com/Shougo/dein.vim
+set runtimepath+=/home/sencho/.local/share/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/home/sencho/.local/share/nvim/')
-  call dein#begin('/home/sencho/.local/share/nvim/')
+if dein#load_state('/home/sencho/.local/share/dein/')
+  call dein#begin('/home/sencho/.local/share/dein/')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/home/sencho/.local/share/nvim//repos/github.com/Shougo/dein.vim')
+  call dein#add('/home/sencho/.local/share/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
@@ -84,7 +84,6 @@ let g:airline_theme='bubblegum'
 
 " Enable solarized
 set termguicolors
-syntax enable
 set background=dark
 colorscheme NeoSolarized
 
