@@ -1,3 +1,6 @@
+# Intended to use on openSUSE (with 'sudo zypper install'),
+# but you can try to run it on other distros
+
 ins_command=$1
 ins() {
   $ins_command $@
