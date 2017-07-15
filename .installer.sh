@@ -43,10 +43,3 @@ ins taskwarrior
 ins_log 'neovim'
 ins neovim
 
-## WM
-ins_log 'i3'
-ins i3
-ins rofi  # my dmenu
-ins feh  # wallpapers
-sudo pip3 install py3status
-

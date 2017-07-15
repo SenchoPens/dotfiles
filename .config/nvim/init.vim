@@ -1,55 +1,11 @@
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
+" source plugin settings before general settings
+let config_dir = expand("~/.config/nvim/")
+let plugins_file = config_dir . 'plugins.vim'
+if filereadable(plugins_file)
+  exec 'source ' . plugins_file
 endif
 
-" Required:
-set runtimepath+=/home/sencho/.local/share/dein/repos/github.com/Shougo/dein.vim
-
-" Required:
-if dein#load_state('/home/sencho/.local/share/dein/')
-  call dein#begin('/home/sencho/.local/share/dein/')
-
-  " Let dein manage dein
-  " Required:
-  call dein#add('/home/sencho/.local/share/dein/repos/github.com/Shougo/dein.vim')
-
-  " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('icymind/NeoSolarized')
-  call dein#add('zchee/deoplete-jedi')
-  call dein#add('neomake/neomake')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('Xuyuanp/nerdtree-git-plugin')
-  call dein#add('ryanoasis/vim-devicons')
-  call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes')
-
-  " You can specify revision/branch/tag.
-  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
-
-" Required:
-filetype plugin indent on
-syntax enable
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
-
-"End dein Scripts-------------------------
-
-" Load deoplete
-call deoplete#enable()
-
+" GENERAL SETTINGS
 " Tabs
 set tabstop=2
 set shiftwidth=2
@@ -63,29 +19,15 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
+" Line numbers - absolute on cursor line and relative on other
 set relativenumber
+set number
 
-" Config NerdTree
-autocmd vimenter * NERDTree  " autload nerdtree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " autoclose nerdtree if it the only one left
-autocmd VimEnter * wincmd p  " Not focus on NERDTree window
+filetype plugin on
+filetype indent on
+set so=10
 
-" Enable glyphs
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
-set encoding=utf-8
-let g:airline_powerline_fonts=1
-let g:webdevicons_enable = 1
-let g:webdevicons_enable_nerdtree = 1
-let g:airline_left_sep = "\uE0C0"
-let g:airline_right_sep = "\uE0D4"
-let g:airline_section_b = 'BN: %{bufnr("%")}'
-"let g:airline_section_x = '%{strftime("%c")}'
-let g:airline_theme='bubblegum'
-
-" Enable solarized
-set termguicolors
-set background=dark
-colorscheme NeoSolarized
-
-:filetype on
+" Set to auto read when a file is changed from the outside
+set autoread
+syntax enable
 

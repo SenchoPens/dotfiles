@@ -7,7 +7,7 @@ set $mod Mod1
 set $TERMINAL gnome-terminal
 
 #font pango:DejaVu Sans Mono 12, Font Awesome 12
-font pango:DejaVuSansMono Nerd Font Book 12
+font pango:DejaVuSansMono Nerd Font 12
 #font pango:HeavyData Nerd Font 12
 
 # Before i3 v4.8, we used to recommend this one as the default:
@@ -19,6 +19,7 @@ font pango:DejaVuSansMono Nerd Font Book 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+#bindsym Up exec echo 'Up key pressed' > /dev/null
 
 # start a terminal
 bindsym $mod+Return exec gnome-terminal --hide-menubar
@@ -26,7 +27,7 @@ bindsym $mod+Return exec gnome-terminal --hide-menubar
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# change focu
+# change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
@@ -78,24 +79,24 @@ bindsym $mod+a focus parent
 
 # workspaces variables
 # firefox
-set $workspace1 "1: "
+set $workspace1 "1:"
 # terminals
-set $workspace2 "2: "
+set $workspace2 "2:"
 # editor
-set $workspace3 "3: "
+set $workspace3 "3:"
 # ide
-set $workspace4 "4: "
+set $workspace4 "4:"
 # other
 set $workspace5 "5"
 set $workspace6 "6"
 # torrents
-set $workspace7 "7: "
+set $workspace7 "7:"
 # communication
-set $workspace8 "8: "
+set $workspace8 "8:"
 # Video
-set $workspace9 "9: "
+set $workspace9 "9:"
 # music
-set $workspace10 "10: "
+set $workspace10 "10:"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -141,29 +142,21 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
         bindsym semicolon resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
 bindsym $mod+r mode "resize"
+
 
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
@@ -179,13 +172,16 @@ client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-col
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 hide_edge_borders both
-# bar
+
+# bar settings
 bar {
-	# status_command "python3 /home/sencho/.config/i3/wrapper.py"
-  status_command py3status
+  status_command "py3status --include /home/sencho/.config/i3/py3status/"
+  separator_symbol "  "
+  #separator_symbol "  "
+  #separator_symbol " "
 	colors {
 		background $bg-color
-	  separator #757575
+	  separator #a8a8a8
 		#                  border             background         text
 		focused_workspace  $bg-color          $bg-color          $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
@@ -193,19 +189,43 @@ bar {
 	}
 }
 
+# bumblebee
+#bar {
+#  #font pango:UbuntuMono Nerd Font Regular 13
+#  colors {
+#		background $bg-color
+#	  separator 
+#		#                  border             background         text
+#		focused_workspace  $bg-color          $bg-color          $text-color
+#		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#	}
+#	position bottom
+#	#tray_output none
+#	status_command bumblebee-status -m disk:root cpu memory battery date time -p interval=5 -t solarized-powerline
+#}
+
 # key-bindings
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 bindsym $mod+d exec rofi -show run
+
+bindsym $mod+Shift+f exec firefox
+
 
 # startup
 exec --no-startup-id firefox
 exec --no-startup-id nm-applet
 exec --no-startup-id fluxgui
 # wallpaper
-exec_always feh --bg-scale /home/sencho/Images/TwinPeaks/wall1.png
+exec_always feh --bg-scale /home/sencho/Pictures/TwinPeaks/wall1.png
 exec compton -f
+# keyboard settings
+exec sencho-xkb
+# mouse settings
+exec xinput --set-prop 14 288 0.8
+

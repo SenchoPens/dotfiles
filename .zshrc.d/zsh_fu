@@ -1,3 +1,7 @@
+seek() {
+  sudo find / -name $@ -not -path '/.snapshots/*'
+}
+
 mkcd() {
   mkdir -p "$@" && eval cd "\"\$$#\""
 }
@@ -11,6 +15,17 @@ start_pma() {
   systemctl start mysql
   systemctl start apache2
   firefox 'http://localhost/phpMyAdmin/'
+}
+
+gen_bitbucket_key() {
+  echo "BOOOM! motherfucking bitbucket key generator!"
+  ssh-keygen
+  echo "\nBOOM! SSH key generated!\n"
+  eval `ssh-agent -s`
+  ssh-add ~/.ssh/id_rsa
+  echo "\nBOOM! SSH key added to current session!\n"
+  echo "Here u r:"
+  cat ~/.ssh/id_rsa.pub
 }
 
 find_string() {
@@ -52,5 +67,13 @@ weather() {
 factorio() {
   cd ~/Games/factorio/bin/x64/
   ./factorio
+}
+
+zypper_ans() {
+  echo 'y'  # proceed to update
+  echo 'yes'  # agree on nouveau driver license
+  while true; do
+    echo 'y'
+  done;
 }
 
