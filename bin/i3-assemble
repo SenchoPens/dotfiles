@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+# generate workspaces from $I3_CONFIG_DIR/workspaces file
+echo 'Assembling...'
+i3wp-gen $I3CONFDIR --roman 
+cd $I3CONFDIR
+cat $(ls *.conf) > config
+

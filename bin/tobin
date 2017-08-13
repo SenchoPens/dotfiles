@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+
+import os
+import argparse
+
+
+def make_executable(path):
+    mode = os.stat(path).st_mode
+    mode |= (mode & 0o444) >> 2    # copy R bits to X
+    os.chmod(path, mode)
+
+
+def get_home():
+    return '/home/' + os.getlogin()
+
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-n', '--name', action='store', dest='name')
+    parser.add_argument('-p', '--project_path', nargs='?', action='store', dest='path', default=(get_home() + '/Projects/'))
+    parser.add_argument('-e', '--extension', nargs='?', action='store', dest='ext', default='.py')
+    return parser.parse_args()
+
+
+def main():
+    args = parse_args()
+    filename = ''.join((args.name, args.ext))
+    full_path = ''.join((args.path, args.name, '/', filename))
+    new_path = ''.join((get_home(), '/bin/', args.name))
+    os.system('cp {file} {new_file}'.format(file=full_path, new_file=new_path))
+    make_executable(new_path)
+
+if __name__ == '__main__':
+    main()

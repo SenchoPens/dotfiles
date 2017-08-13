@@ -1,0 +1,6 @@
+#!/usr/bin/zsh
+
+# print output of the 'light' command without fractional part
+out="$(light)"
+echo $out[1,-4]
+

@@ -1,0 +1,82 @@
+#!/usr/bin/env python3
+
+import pathlib
+import sys
+import os
+import argparse
+
+
+LEFT_ARROW = 's'
+RIGHT_ARROW = 'x'
+
+
+def gen_print(file):
+    def print_(x):
+        print(x, file=file)
+    return print_
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(prog='i3wp-gen', description='Generates i3 workspaces config')
+    parser.add_argument('dir', help='path to i3wm config directory', type=str)
+    parser.add_argument('--roman', help='display workspaces with roman letters',
+                        action='store_true')
+    parser.add_argument('--arrows', help='display arrows to workspaces',
+                        action='store_true')
+    return parser.parse_args()
+
+
+def roman(x):
+    return ('I' * x).replace('I' * 10, 'X').replace('I' * 9, 'IX').replace('I' * 5, 'V').replace('I' * 4, 'IV')
+
+
+def add_arrows(x, name):
+    return ' '.join((LEFT_ARROW * (x > 1), name, RIGHT_ARROW * (x < 10)))
+
+
+def good_maker(args):
+    def make_good(name, i):
+        res = name
+        if args.roman:
+            res = ': '.join((roman(i), res))
+        if args.arrows:
+            res = add_arrows(i, res)
+        res = f'{i}:{res}'
+        return res
+    return make_good
+
+
+def main():
+    args = parse_args()
+    i3conf_dir = pathlib.Path(args.dir)
+    make_good = good_maker(args)
+
+    workspaces = []
+
+    with open(i3conf_dir / 'workspaces', 'r') as wp_file:
+        for line in wp_file:
+            workspaces.append(line.strip())
+
+    with open(i3conf_dir / 'workspaces.conf', 'w') as wp_out_file:
+        print_ = gen_print(wp_out_file)
+
+        print_('### WORKSPACES CONFIG ###')
+
+        for i, wp_icon in enumerate(workspaces):
+            print_(f'set $workspace{i + 1} "{make_good(wp_icon, i + 1)}"')
+        print_('')
+
+        for i in range(1, len(workspaces) + 1):
+            print_(f'bindsym $mod+{i % 10} '
+                   f'workspace $workspace{i}')
+        print_('')
+
+        for i in range(1, len(workspaces) + 1):
+            print_(f'bindsym $mod+Shift+{i % 10} '
+                   f'move container to workspace $workspace{i}')
+        print_('')
+
+
+if __name__ == '__main__':
+    main()
+
