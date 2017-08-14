@@ -65,10 +65,7 @@ exec xinput --set-prop 14 288 0.8
 workspace_auto_back_and_forth yes
 
 ### KEYBINDINGS CONFIG ###
-# Glitching keys
-bindsym Up nop
 bindsym F1 nop
-bindcode 112 nop
 
 bindsym $mod+Return exec gnome-terminal --hide-menubar
 #bindsym $mod+Return exec $TERMINAL

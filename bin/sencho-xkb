@@ -1,5 +1,3 @@
 #!/bin/bash
-setxkbmap -option "caps:ctrl_modifier"
-setxkbmap -option "grp:rshift_toggle,grp_led:caps"
-setxkbmap -layout "us,ru"
+setxkbmap -layout "us+sencho_xkb(default)+sencho_xkb(msi),ru(winkeys)" -option "" -option "grp:rshift_toggle,grp_led:caps,caps:ctrl_modifier" -print | xkbcomp -I"$HOME/.config/xkb" - "${DISPLAY%%.*}"
 

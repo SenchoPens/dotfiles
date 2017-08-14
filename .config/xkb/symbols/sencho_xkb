@@ -1,0 +1,7 @@
+xkb_symbols "default" {
+  key <TLDE> { [ asciitilde, grave ] };
+};
+
+xkb_symbols "msi" {
+  key <PGUP> { [ VoidSymbol ] };
+};
