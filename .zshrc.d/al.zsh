@@ -39,7 +39,7 @@ alias wmos='weather Moscow'
 
 # Useful command aliases that I always forget
 alias save_targz='tar -czvf'
-alias unpack_targz='tar -xzf'
+alias unpack_tar='tar xf'
 
 # Aliases for automated file opening
 alias -s txt=nvim

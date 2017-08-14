@@ -1,6 +1,6 @@
 ### BASE CONFIG ###
 # constants
-set $TERMINAL gnome-terminal
+set $TERMINAL termite
 set $mod Mod1
 
 font pango:DejaVuSansMono Nerd Font 12
@@ -67,8 +67,8 @@ workspace_auto_back_and_forth yes
 ### KEYBINDINGS CONFIG ###
 bindsym F1 nop
 
-bindsym $mod+Return exec gnome-terminal --hide-menubar
-#bindsym $mod+Return exec $TERMINAL
+#bindsym $mod+Return exec $TER
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
