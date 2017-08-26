@@ -1,0 +1,1 @@
+/home/sencho/.local/share/JetBrains/Toolbox/apps/PyCharm-C/ch-0/172.3544.46/bin/pycharm.sh

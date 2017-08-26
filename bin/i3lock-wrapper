@@ -1,0 +1,182 @@
+#!/bin/bash
+
+# Copyright (c) 2013-2015 Artem Shinkarov <artyom.shinkaroff@gmail.com>
+#
+# Permission to use, copy, modify, and distribute this software for any
+# purpose with or without fee is hereby granted, provided that the above
+# copyright notice and this permission notice appear in all copies.
+#
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+# WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+# ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+# WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+# ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+# OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+set -e
+
+script_name=$(basename $0)
+params=$(getopt \
+         -o vnbdI:up:eflh \
+         -l version,nofork,beep,dpms,inactivity-timeout:,no-unlock-indicator,pointer:,ignore-empty-password,show-failed-attempts,logo,help \
+         -n "$script_name" -- "$@")
+eval set -- "$params"
+# exit on bad arguments
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+
+usage () {
+    cat <<EOF
+A wrapper around i3lock that sets a blurred screenshot 
+as a background image for the screen saver.
+
+Usage: $script_name [options]
+
+    -v, --version               version of the i3lock.
+    -n, --nofork                don't fork i3lock after start.
+    -b, --beep                  enable beeping.
+    -d, --dpms                  enable turning off the screen with DPMS.
+    -I sec,
+    --inactivity-timeout=sec    specifies  the  number of seconds i3lock will 
+                                wait for another password before turning
+                                off the monitors.
+    -u, --no-unlock-indicator   disable the unlock indicator.
+    -p win|default, 
+    --pointer=win|default       do not hide the mouse pointer on default
+                                or the current position of the mouse pointer.
+    -e, --ignore-empty-password when an empty password is provided by the user,
+                                do  not  validate  it.
+    -l, --logo                  superimpose the padlock logo
+
+    Please note, that all the options except "-l" or "--logo" are being passed 
+    directly to i3lock.  See "man i3lock" for more details.
+EOF
+}
+
+arg_test () { 
+    # Filter out arguments that are invalid
+    while true; do
+       case "$1" in
+           -v|--version)
+               i3lock -v
+               exit
+               ;;
+           -n|--nofork)                
+               shift;;
+           -b|--beep)              
+               shift;;
+           -d|--dpms)                  
+               shift;;
+           -I|--inactivity-timeout)
+               shift
+               case "$1" in
+                   [0-9]*)
+                       shift;;
+                    *)
+                       echo "$script_name: invalid option \"$1\" for argument -I" \
+                            "number expected" >&2
+                       exit 1
+                       ;;
+               esac
+               ;;
+           -u|--no-unlock-indicator)   
+               shift;;
+           -p|--pointer) 
+               shift
+               case "$1" in
+                   win|default)
+                       shift;;
+                   *)
+                       echo "$script_name: invalid option \"$1\" for argument -p" >&2
+                       exit 1
+                       ;;
+               esac
+               ;;
+           -e|--ignore-empty-password)
+               shift;;
+           -f|--show-failed-attempts)
+               shift;;
+           -l|--logo)
+               use_logo=1
+               shift;;
+           -h|--help)
+               usage
+               exit
+               ;;
+           --)
+               shift 
+               break ;;
+
+           *)
+               echo "$script_name: invalid argument \"$1\"" >&2
+               exit 1
+               ;;
+       esac
+    done
+
+    if [ $# -ne 0 ]; then
+       echo "$script_name: invalid arguments \"$@\""
+       exit 1
+    fi
+}
+
+# This is a gzipped i3lock-icon.svg converted into pdf with base64 applied
+img_pdf_gz () {
+    cat <<EOF
+H4sICKMgz1MAA2kzbG9jay1pY29uLnBkZgCVkm1IU1EYx7NI7FpBSWSheYgsDdvu3d2920xGbk4b
+JulMQtLoenc2r63dde5ZLasPRfWpwOpDEGmUgwrUsugVsoSkULP3FAp6n6H2RtELBXV23aa0vnS5
+nHvu75znOc//+Z/M0oLCJYyGozLPv2v7SbGABnJNHZWXB7QroNeNa4GeIAcFANAWSh4MEfl6BAwL
+oCg7IWU2UwpGUNhABY7AA/neG3SS7Zt58rDmJDNwnQklVQT7cu7bnvws7prSt/xB9Tz+1++NHcW2
+mfPTP/5+NTj9Q8as99dsuYdTSytGHr1Irr/Zh2clHlt8aX5PQihx4cmrnYm3y6oPJo+ce76hZTiv
+YU9V89ogH6gaaq3hpvnbmKFKUMzuLOigvwSlqcaBztRGaSil+WHC4zN7On39+ZzltGy58HbpMstO
+4+HpdZPWG6X0xuAEW9B16M1BPjX9UW37jCt360q629cg+73tjScyOE+o55TOkTFnQf2imyHd26aq
+NtveubOPrq+vfPU0Z3Pa+Tv9vV1NafuK2r6n9LqOhFZ3B6fldk2yox3zfmzzNzWIF3fvOr5x4UAW
+v+7Wp6Sy15dDO14O3r0+seVe/v7sPN/Wrs9fzT01Zwtb6RO99jfSyzLzs+7WXwm44cAmCnqdkVaS
+WdgEfcQM0ntWR0epLmaRaootgIvKMTEEjIIwE2gQNtCaDxigFQUyEpvIAhnJG8nDjbN61RYfBNpS
+wQ3VnKUCgl5MwqLOl0CnJFjkAFhDEA2MJg1nIo8RMCytYcNTPahWd1plLyaxCmBjwUVI9vvGVTd6
+mEqjqJxQJHgVX/hgcUsU2wFGfhj9s5JdBXCTJEJHkSUiJ8wdUJH9SIQK0Klnjklk/ilRUaOKJadC
+5IS74IjV7g+rHpeAH5fASqzBMgJZoiAhGTAaRqdheJBVi7EvV6tVqRsJvlpJVDQycmdnj/YSyU6/
+CP8rbqwAQ5wCq4AFj+yO+ETURGwaiwkg6KKISRQdewDPcSwHXCDKDCzxR13xxpie1ccxmuHi9zG6
+OMbRfBwzkPvxNzPpDGMMI0HyQKSKK5fqISlZ9VOWMTDEro/d65IBH9WoYAFhVaHJYKIyM20rC6k/
++epZU8QEAAA=
+EOF
+}
+
+superimpose_padlock() {
+    scale=.8
+    lockimage=$(mktemp --tmpdir i3lock-logo-XXXXXXXXXX)
+    img_pdf_gz | base64 -d | gunzip > "${lockimage}.pdf"
+    height=$(identify -format "($scale * %H + .5)/1\n" "$file2" | bc)     
+    width=$(identify -format "scale=4; t=%W/%H; scale=0; (t * $height + .5)/1\n" "${lockimage}.pdf" | bc)
+    convert -density 600 -background none -resize ${height}x${width} "${lockimage}.pdf" "${lockimage}.png"
+    convert -compose Exclusion -composite -gravity center "$file2" "${lockimage}.png" "$file2"
+    rm "${lockimage}" "${lockimage}.png" "${lockimage}.pdf"
+}
+
+use_logo=0
+arg_test $@
+
+file1=$(mktemp --tmpdir i3lock-wrapper-XXXXXXXXXX.png)
+file2=$(mktemp --tmpdir i3lock-wrapper-XXXXXXXXXX.png)
+
+scrot -z -d0 "$file1"
+convert "$file1" -blur 0x3 "$file2"
+rm "$file1" # Remove for security
+
+if [ $use_logo -eq 1 ]; then
+    superimpose_padlock
+fi
+
+cmd=()
+for i in $@; do
+    if [[ $i != '-l'  &&  $i != '--logo' && $i != '--' ]]; then
+        cmd+="$i "
+    fi
+done
+
+# drop the last "--" introduced by getopt
+i3lock -i "$file2" ${cmd}
+
+trap "rm '$file2'" EXIT
