@@ -22,6 +22,7 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('PotatoesMaster/i3-vim-syntax')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })

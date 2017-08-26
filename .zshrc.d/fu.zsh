@@ -86,6 +86,14 @@ cdl() {
   ls
 }
 
+ranger() {
+    if [ -z "$RANGER_LEVEL" ]; then
+        /usr/bin/ranger "$@"
+    else
+        exit
+    fi
+}
+
 launch_mplayer() {
   gmplayer -alang $1 -slang eng,rus -ass-border-color 000000FF -ass-color FFD630FF -ass-force-style FontName=Serif -subpos 93 $2
 }
@@ -112,5 +120,9 @@ eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 
   su $1
   gen_bitbucket_key
+}
+
+download_ftp() {
+  wget -m --user=$1 --password=$2 $3
 }
 

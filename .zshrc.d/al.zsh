@@ -4,12 +4,16 @@ alias mount='sudo mount'
 alias umount='sudo umount'
 alias fdisk='sudo fdisk'
 alias pip3='sudo pip3'
+alias pip='sudo pip'
+alias pip2='sudo pip2'
 
 # Hashes
 hash -d pproj=~/Projects
 hash -d i3conf=$I3CONFDIR
-hash -d viconf=~/.config/nvim/
+hash -d viconf=~/.config/nvim
 hash -d amusic=/media/mtp/sdcard1/Music
+hash -d zrc=~/.zshrc.d
+hash -d ins=~/.installer.sh
 
 # Aliases for translation
 alias ten='trans :en'
@@ -25,8 +29,11 @@ alias jpy='nonohup jupyter notebook'
 alias jco='coconut --target 36 --jupyter notebook'
 alias todo='task add'
 alias pipin='pip3 install --user'
-alias rainbow='yes "$(seq 231 -1 16)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .02; done'
 alias urbdict='zdict --dict urban'
+alias pin='pacaur -S --noedit'
+alias rg='ranger'
+alias ptpy='ptipython'
+alias ls='ls --color -h --group-directories-first'
 
 alias enpl='launch_mplayer eng,rus,jap'
 alias rupl='launch_mplayer rus,eng,jap'

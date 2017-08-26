@@ -1,4 +1,6 @@
-# Useless, but fun zsh functions
+# Useless, but fun zsh stuff
+
+alias rainbow='yes "$(seq 231 -1 16)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .02; done'
 
 mandelbrot() {
     local lines columns colour a b p q i pnew
