@@ -1,0 +1,23 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="PyCharm.InitialConfiguration" value="true" />
+    <property name="PyCharm.InitialConfiguration.V2" value="true" />
+    <property name="PyCharm.InitialConfiguration.V3" value="true" />
+    <property name="PyCharm.InitialConfiguration.V4" value="true" />
+    <property name="PyCharm.InitialConfiguration.V5" value="true" />
+    <property name="PyCharm.InitialConfiguration.V6" value="true" />
+    <property name="fileTypeChangedCounter" value="1" />
+    <property name="PyCharm.initialConfigurationShown" value="true" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/Projects/fo_bot&#10;/home/sencho/Projects/algos&#10;/home/sencho/Projects/bot_wot&#10;/home/sencho/Projects/SCS_C-touch&#10;/home/sencho/Projects/lksh&#10;/home/sencho/Projects/wot_bot&#10;/home/sencho/.virtualenvs/wot-kADDND0X/bin/python&#10;/home/sencho/Projects/wot&#10;/home/sencho/.local/share/virtualenvs/fo_bot-9jl4oFW9/bin/python3.6" />
+    <property name="file.gist.reindex.count" value="12175" />
+    <property name="lastTip" value="11" />
+    <property name="PLUGIN_FILTER" value="vim" />
+    <property name="ideavim.statistics.timestamp" value="1503769913733" />
+    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.61945635" />
+    <property name="OpenOrAttachDialog.OpenMode" value="attach" />
+    <property name="settings.code.style.selected.tab.Python" value="Imports" />
+    <property name="selected.color.option.type" value="PY.OPERATION_SIGN" />
+    <property name="ColorChooser.RecentColors" value="198-38-50-255,,,235-26-52-255,,,235-11-74-255,,,235-27-154-255,,,235-111-85-255,,,235-117-94-255,,,201-73-158-255,,,183-154-110-255,,,225-204-94-255,,,205-65-220-255,,,255-71-186-255,,,183-107-255-255,,,99-225-255-255,,,235-87-69-255,,,90-97-255-255,,,255-247-87-255,,,22-255-127-255,,,255-164-42-255,,,186-255-214-255,,,131-169-146-255" />
+    <property name="FileTemplates.SelectedTemplate" value="Python Script" />
+  </component>
+</application>

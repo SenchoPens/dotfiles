@@ -1,0 +1,185 @@
+
+# 2017-08-21 23:08:40.746119
++ls
+
+# 2017-08-21 23:09:06.678340
++def main():
++    print('hi')
+
+# 2017-08-21 23:09:08.720373
++main()
+
+# 2017-08-21 23:09:29.185163
++print('hi')
+
+# 2017-08-21 23:22:00.294015
++def main():
++    print('hi')
++    
++
++
++    
+
+# 2017-08-21 23:22:01.689877
++ls
+
+# 2017-08-21 23:24:16.835640
++def main():
++    print('hi')
+
+# 2017-08-21 23:24:17.929702
++ls
+
+# 2017-08-21 23:24:20.021636
++main()
+
+# 2017-08-21 23:25:53.590521
++def main():
++    print('hi')
+
+# 2017-08-21 23:26:00.914979
++%timeit main
+
+# 2017-08-21 23:26:30.741920
++exit()
+
+# 2017-08-21 23:28:24.724467
++2 ** 38
+
+# 2017-08-21 23:28:50.013342
++exit()
+
+# 2017-08-21 23:29:32.949924
++2 ** 38
+
+# 2017-08-21 23:48:38.271238
++q = ' g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr\'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj. '
+
+# 2017-08-21 23:48:46.232731
++q_start = q
+
+# 2017-08-21 23:48:57.434052
++q.replace('g', 'e')
+
+# 2017-08-21 23:49:17.136923
++q.replace('q', 'o')
+
+# 2017-08-21 23:49:41.679426
++q.replace('m', 'k')
+
+# 2017-08-21 23:49:46.585997
++q
+
+# 2017-08-21 23:51:14.848746
++q.replace('g', 'e').replace('q', 'o').replace('m', 'k')
+
+# 2017-08-21 23:54:29.438061
++import string
+
+# 2017-08-21 23:54:32.669396
++string.ascii_lowercase
+
+# 2017-08-21 23:56:10.346722
++def tr(l):
++    return string.ascii_lowercase[string.ascii_lowercase.find(l) % len(string.ascii_lowercase)]
+
+# 2017-08-21 23:56:29.947088
++def tr(l):
++    return string.ascii_lowercase[(string.ascii_lowercase.find(l) + 2) % len(string.ascii_lowercase)]
+
+# 2017-08-21 23:56:35.454091
++tr('e')
+
+# 2017-08-21 23:56:42.031810
++tr('z')
+
+# 2017-08-21 23:57:15.562655
++q = q_start
+
+# 2017-08-21 23:57:25.718069
++q = q.replace('.', '')
+
+# 2017-08-21 23:57:41.452220
++ql = q.split(' ')
+
+# 2017-08-21 23:57:48.051350
++ql
+
+# 2017-08-21 23:58:20.721412
++for w in ql:
++    print(''.join(map(tr, w)))
+
+# 2017-08-22 00:05:15.234985
++exit()
+
+# 2017-08-22 00:05:22.664907
++?
+
+# 2017-08-22 00:05:32.723011
++from string import ascii_lowercase
+
+# 2017-08-22 00:05:43.143804
++from collections import deque
+
+# 2017-08-22 00:06:05.422604
++to = deque(ascii_lowercase)
+
+# 2017-08-22 00:06:25.287751
++to.rotate(2)
+
+# 2017-08-22 00:06:26.734308
++to
+
+# 2017-08-22 00:07:01.761204
++table = str.maketrans(ascii_lowercase, ''.join(to))
+
+# 2017-08-22 00:07:27.291679
++url = 'https://docs.python.org/3/library/codecs.html#module-codecs'.translate(table)
+
+# 2017-08-22 00:07:28.177734
++url
+
+# 2017-08-22 00:08:01.084612
++url2 = 'pc/def/map'
+
+# 2017-08-22 00:08:06.687488
++url2.translate(table)
+
+# 2017-08-22 00:09:03.231076
++q = ' g fmnc wms bgblr rpylqjyrc gr zw fylb. rfyrq ufyr amknsrcpq ypc dmp. bmgle gr gl zw fylb gq glcddgagclr ylb rfyr\'q ufw rfgq rcvr gq qm jmle. sqgle qrpgle.kyicrpylq() gq pcamkkclbcb. lmu ynnjw ml rfc spj. '
+
+# 2017-08-22 00:09:08.180218
++q.translate(table)
+
+# 2017-08-22 00:09:30.826399
++to
+
+# 2017-08-22 00:09:35.416706
++to.rotate(-4)
+
+# 2017-08-22 00:09:40.581892
++table = str.maketrans(ascii_lowercase, ''.join(to))
+
+# 2017-08-22 00:09:43.623078
++q.translate(table)
+
+# 2017-08-22 00:09:48.744461
++url2.translate(table)
+
+# 2017-08-22 00:14:18.279743
++exit()
+
+# 2017-08-22 18:48:00.264049
++6 * (1 + 4)
+
+# 2017-08-22 18:48:27.967146
++from algos.factorize import factorize
+
+# 2017-08-22 18:48:32.250673
++factorize(30)
+
+# 2017-08-22 18:48:39.180446
++list(factorize(30))
+
+# 2017-08-22 21:47:40.084629
++exit()

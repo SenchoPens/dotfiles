@@ -1,0 +1,101 @@
+<application>
+  <component name="ProjectJdkTable">
+    <jdk version="2">
+      <name value="Python 3.6.2 virtualenv at ~/.local/share/virtualenvs/fo_bot-9jl4oFW9" />
+      <type value="Python SDK" />
+      <version value="Python 3.6.2" />
+      <homePath value="$USER_HOME$/.local/share/virtualenvs/fo_bot-9jl4oFW9/bin/python3.6" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="file://$USER_HOME$/.local/share/virtualenvs/fo_bot-9jl4oFW9/bin" />
+            <root type="simple" url="file://$USER_HOME$/Projects" />
+            <root type="simple" url="file://$USER_HOME$/.local/share/virtualenvs/fo_bot-9jl4oFW9/lib/python3.6" />
+            <root type="simple" url="file://$USER_HOME$/.local/share/virtualenvs/fo_bot-9jl4oFW9/lib/python3.6/lib-dynload" />
+            <root type="simple" url="file:///usr/lib64/python3.6" />
+            <root type="simple" url="file:///usr/lib/python3.6" />
+            <root type="simple" url="file://$USER_HOME$/.local/share/virtualenvs/fo_bot-9jl4oFW9/lib/python3.6/site-packages" />
+            <root type="simple" url="file://$USER_HOME$/.config/pycharm/system/python_stubs/-1869859946" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.6" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.5" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.4" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/2and3" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional />
+    </jdk>
+    <jdk version="2">
+      <name value="Python 3.6.2 virtualenv at ~/.virtualenvs/wot-kADDND0X" />
+      <type value="Python SDK" />
+      <version value="Python 3.6.2" />
+      <homePath value="$USER_HOME$/.virtualenvs/wot-kADDND0X/bin/python" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="file://$USER_HOME$/.local/share/virtualenvs/wot-kADDND0X/bin" />
+            <root type="simple" url="file://$USER_HOME$/Projects" />
+            <root type="simple" url="file://$USER_HOME$/.virtualenvs/wot-kADDND0X/lib/python3.6" />
+            <root type="simple" url="file://$USER_HOME$/.virtualenvs/wot-kADDND0X/lib/python3.6/lib-dynload" />
+            <root type="simple" url="file:///usr/lib64/python3.6" />
+            <root type="simple" url="file:///usr/lib/python3.6" />
+            <root type="simple" url="file://$USER_HOME$/.virtualenvs/wot-kADDND0X/lib/python3.6/site-packages" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/213686498" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.6" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.5" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.4" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/2and3" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional />
+    </jdk>
+    <jdk version="2">
+      <name value="Python 3.6.2 (/usr/bin/python3.6)" />
+      <type value="Python SDK" />
+      <version value="Python 3.6.2" />
+      <homePath value="/usr/bin/python3.6" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="file:///usr/bin" />
+            <root type="simple" url="file://$USER_HOME$/Projects" />
+            <root type="simple" url="file:///usr/lib/python3.6" />
+            <root type="simple" url="file:///usr/lib/python3.6/lib-dynload" />
+            <root type="simple" url="file:///usr/lib/python3.6/site-packages" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-1247971763" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.6" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.5" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.4" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3.3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/3" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/2and3" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional />
+    </jdk>
+  </component>
+</application>

@@ -1,0 +1,22 @@
+<application>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="AbstractNewProjectStep.Pure Python" count="1" />
+      <entry feature="StripeButton[Version_Control].shown" count="1" />
+      <entry feature="execute.PythonConfigurationType.Debug" count="1" />
+      <entry feature="execute.PythonConfigurationType.Run" count="13" />
+      <entry feature="ide.settings.GitHub" count="3" />
+      <entry feature="ide.settings.Plugins" count="1" />
+      <entry feature="ide.settings.Project_Interpreter" count="6" />
+      <entry feature="ide.settings.Project_Structure" count="3" />
+      <entry feature="ide.settings.Python" count="3" />
+      <entry feature="ide.settings.Version_Control" count="1" />
+      <entry feature="ideaapp.started" count="14" />
+      <entry feature="python.console.local" count="5" />
+      <entry feature="welcome.screen.WelcomeScreen.Configure" count="1" />
+      <entry feature="welcome.screen.WelcomeScreen.Documentation" count="2" />
+      <entry feature="welcome.screen.WelcomeScreen.OpenDirectoryProject" count="1" />
+      <entry feature="welcome.screen.WelcomeScreen.Settings" count="1" />
+    </counts>
+  </component>
+</application>

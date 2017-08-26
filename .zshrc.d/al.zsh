@@ -34,6 +34,8 @@ alias pin='pacaur -S --noedit'
 alias rg='ranger'
 alias ptpy='ptipython'
 alias ls='ls --color -h --group-directories-first'
+alias yacam='yadm commit -am'
+alias yadd='yadm add'
 
 alias enpl='launch_mplayer eng,rus,jap'
 alias rupl='launch_mplayer rus,eng,jap'

@@ -126,3 +126,12 @@ download_ftp() {
   wget -m --user=$1 --password=$2 $3
 }
 
+yadm_add_all() {
+  name=$1
+  imp_dirs=(~/bin ~/.zshrc.d ~/.config/nvim ~/.config/i3 ~/.config/vimfx ~/.config/xkb ~/.ptpython ~/.config/pycharm/config ~/.config/termite)
+  for imp_dir in $imp_dirs
+  do
+    yadm add $imp_dir
+  done
+}
+

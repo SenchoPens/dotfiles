@@ -1,0 +1,18 @@
+<application>
+  <component name="PyTestFrameworkService">
+    <option name="SDK_TO_PYTEST">
+      <map>
+        <entry key="$USER_HOME$/.local/share/virtualenvs/fo_bot-9jl4oFW9/bin/python3.6" value="false" />
+        <entry key="$USER_HOME$/.virtualenvs/wot-kADDND0X/bin/python" value="false" />
+        <entry key="/usr/bin/python3.6" value="false" />
+      </map>
+    </option>
+    <option name="SDK_TO_NOSETEST">
+      <map>
+        <entry key="$USER_HOME$/.local/share/virtualenvs/fo_bot-9jl4oFW9/bin/python3.6" value="false" />
+        <entry key="$USER_HOME$/.virtualenvs/wot-kADDND0X/bin/python" value="false" />
+        <entry key="/usr/bin/python3.6" value="false" />
+      </map>
+    </option>
+  </component>
+</application>
