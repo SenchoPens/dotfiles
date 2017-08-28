@@ -15,42 +15,53 @@ hash -d amusic=/media/mtp/sdcard1/Music
 hash -d zrc=~/.zshrc.d
 hash -d ins=~/.installer.sh
 
-# Aliases for translation
+# Words translation and definition
 alias ten='trans :en'
 alias tru='trans :ru'
+alias urbdict='zdict --dict urban'
 
-# Aliases for my progs
+# My progs
 alias pcomf='pcom -f'
 alias tobinf='tobin -n'
 
-# Just aliases
-alias qtcreator='sh /home/sencho/Qt/Tools/QtCreator/bin/qtcreator.sh &'
+# Python development
 alias jpy='nonohup jupyter notebook'
+# coconut - function programming python-like language
 alias jco='coconut --target 36 --jupyter notebook'
-alias todo='task add'
 alias pipin='pip3 install --user'
-alias urbdict='zdict --dict urban'
+alias ptpy='ptipython'  # cool console (i)python REPL
+
+# pacaur - a wrapper around AUR
 alias pin='pacaur -S --noedit'
+
+# Various
+alias todo='task add'
 alias rg='ranger'
-alias ptpy='ptipython'
+
+# ls
 alias ls='ls --color -h --group-directories-first'
+alias lc='colorls -r -sd'  # ls with icons
+
+# yadm (git for dotfiles)
 alias yacam='yadm commit -am'
 alias yadd='yadm add'
 
+# Multimedia
 alias enpl='launch_mplayer eng,rus,jap'
 alias rupl='launch_mplayer rus,eng,jap'
 
+# Global
 alias -g L="| less"
 alias -g ED="export DISPLAY=:0.0"
 
 # For weather
 alias wmos='weather Moscow'
 
-# Useful command aliases that I always forget
+# Archives
 alias save_targz='tar -czvf'
 alias unpack_tar='tar xf'
 
-# Aliases for automated file opening
+# Aliases for automated file opening (better be in rifle?)
 alias -s txt=nvim
 alias -s {avi,mkv,mp4}=enpl
 alias -s html='firefox'

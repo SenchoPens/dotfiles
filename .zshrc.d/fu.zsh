@@ -9,6 +9,10 @@ seek() {
   sudo find / -name $@ -not -path '/.snapshots/*'
 }
 
+pse() {
+  pacaur -Ss $1 | less
+}
+
 mkcd() {
   mkdir -p "$@" && eval cd "\"\$$#\""
 }

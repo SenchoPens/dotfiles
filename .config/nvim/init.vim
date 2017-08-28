@@ -31,3 +31,6 @@ set so=10
 set autoread
 syntax enable
 
+" Make Y behave like other capitals
+:map Y y$
+

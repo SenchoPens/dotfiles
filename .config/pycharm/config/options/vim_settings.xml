@@ -3,30 +3,19 @@
     <state version="4" enabled="true" />
     <globalmarks />
     <filemarks>
-      <file name="/Dummy.txt" timestamp="1503771697767">
-        <mark key="[" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/Projects/algos/sieve_benchmark.py" timestamp="1503417296541">
-        <mark key="[" line="2" column="5" />
-        <mark key="]" line="2" column="5" />
-        <mark key="." line="2" column="5" />
-      </file>
-      <file name="/Python Console" timestamp="1503782738305">
-        <mark key="[" line="0" column="0" />
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/fo_api/__init__.py" timestamp="1503868399265">
+        <mark key="[" line="5" column="30" />
+        <mark key="]" line="5" column="30" />
+        <mark key="^" line="5" column="30" />
+        <mark key="." line="5" column="30" />
       </file>
       <file name="$USER_HOME$/Projects/fo_bot/fo_bot/bot_states/cabinet.py" timestamp="1502803184101">
         <mark key="[" line="14" column="0" />
         <mark key="]" line="14" column="0" />
         <mark key="." line="14" column="0" />
       </file>
-      <file name="/a.dummy" timestamp="1503000184865">
+      <file name="/a.dummy" timestamp="1503869182650">
         <mark key="[" line="0" column="0" />
-      </file>
-      <file name="$USER_HOME$/Projects/asciicubes/layer.py" timestamp="1503418361290">
-        <mark key="[" line="7" column="12" />
-        <mark key="]" line="1" column="0" />
-        <mark key="^" line="1" column="0" />
-        <mark key="." line="1" column="0" />
       </file>
       <file name="$USER_HOME$/Projects/asciicubes/dot.py" timestamp="1503417972508">
         <mark key="[" line="5" column="9" />
@@ -34,24 +23,67 @@
         <mark key="^" line="5" column="8" />
         <mark key="." line="5" column="8" />
       </file>
-      <file name="$USER_HOME$/Projects/asciicubes/lines.py" timestamp="1503418253665">
-        <mark key="[" line="15" column="8" />
-        <mark key="]" line="15" column="8" />
-        <mark key="." line="15" column="8" />
-        <mark key="^" line="15" column="8" />
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/base.py" timestamp="1503868141131">
+        <mark key="[" line="21" column="76" />
+        <mark key="]" line="21" column="76" />
+        <mark key="^" line="21" column="76" />
+        <mark key="." line="21" column="76" />
       </file>
-      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/__init__.py" timestamp="1503000354207">
-        <mark key="[" line="21" column="23" />
-        <mark key="]" line="21" column="36" />
-        <mark key="^" line="21" column="36" />
-        <mark key="." line="21" column="36" />
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/documents.py" timestamp="1503868362140">
+        <mark key="[" line="1" column="0" />
+        <mark key="]" line="1" column="0" />
+        <mark key="." line="1" column="0" />
       </file>
-      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/bot_utils/error_handler.py" timestamp="1503428252323">
-        <mark key="'" line="1" column="28" />
-        <mark key="[" line="26" column="44" />
-        <mark key="]" line="26" column="44" />
-        <mark key="." line="26" column="44" />
-        <mark key="^" line="26" column="43" />
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/fo_api/error_handler.py" timestamp="1503868450754">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="28" column="21" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/error_handler.py" timestamp="1503868700369">
+        <mark key="[" line="20" column="0" />
+        <mark key="]" line="31" column="100" />
+        <mark key="^" line="30" column="15" />
+        <mark key="." line="3" column="6" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/exceptions.py" timestamp="1503878156805">
+        <mark key="[" line="3" column="19" />
+        <mark key="]" line="4" column="7" />
+        <mark key="^" line="4" column="7" />
+        <mark key="." line="4" column="7" />
+      </file>
+      <file name="$USER_HOME$/Projects/asciicubes/__init__.py" timestamp="1503418105123">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="4" column="9" />
+        <mark key="^" line="4" column="9" />
+        <mark key="." line="4" column="9" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/propertyobject.py" timestamp="1503868218945">
+        <mark key="[" line="4" column="8" />
+        <mark key="]" line="4" column="8" />
+        <mark key="^" line="4" column="8" />
+        <mark key="." line="4" column="8" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/objectfullinfo.py" timestamp="1503868302916">
+        <mark key="[" line="6" column="6" />
+        <mark key="]" line="6" column="6" />
+        <mark key="^" line="4" column="0" />
+        <mark key="." line="6" column="6" />
+      </file>
+      <file name="$USER_HOME$/Projects/algos/sieve.py" timestamp="1503417285569">
+        <mark key="[" line="30" column="0" />
+        <mark key="]" line="30" column="0" />
+        <mark key="." line="30" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/savedorder.py" timestamp="1503868246136">
+        <mark key="[" line="7" column="6" />
+        <mark key="]" line="7" column="6" />
+        <mark key="^" line="5" column="0" />
+        <mark key="." line="7" column="6" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/tg/bot_states/auth.py" timestamp="1503867761818">
+        <mark key="[" line="1" column="18" />
+        <mark key="]" line="1" column="18" />
+        <mark key="." line="1" column="18" />
+        <mark key="^" line="1" column="18" />
       </file>
       <file name="$USER_HOME$/Projects/asciicubes/__main__.py" timestamp="1503417740453">
         <mark key="[" line="1" column="44" />
@@ -65,18 +97,11 @@
         <mark key="." line="20" column="10" />
         <mark key="^" line="20" column="10" />
       </file>
-      <file name="$USER_HOME$/Projects/bot_wot/wotexpress/main.py" timestamp="1503403181638">
-        <mark key="'" line="99" column="26" />
-        <mark key="[" line="88" column="0" />
-        <mark key="]" line="89" column="70" />
-        <mark key="." line="89" column="70" />
-        <mark key="^" line="89" column="70" />
-      </file>
-      <file name="$USER_HOME$/Projects/asciicubes/__init__.py" timestamp="1503418105123">
-        <mark key="[" line="0" column="0" />
-        <mark key="]" line="4" column="9" />
-        <mark key="^" line="4" column="9" />
-        <mark key="." line="4" column="9" />
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/orderinfo.py" timestamp="1503868281302">
+        <mark key="[" line="3" column="14" />
+        <mark key="]" line="4" column="0" />
+        <mark key="." line="4" column="0" />
+        <mark key="^" line="4" column="0" />
       </file>
       <file name="$USER_HOME$/Projects/fo_bot/fo_bot/bot_utils/search.py" timestamp="1503342783214">
         <mark key="[" line="17" column="47" />
@@ -84,37 +109,118 @@
         <mark key="." line="18" column="3" />
         <mark key="^" line="18" column="3" />
       </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/text.py" timestamp="1503858975499">
+        <mark key="[" line="1" column="0" />
+        <mark key="]" line="1" column="0" />
+        <mark key="^" line="10" column="49" />
+        <mark key="." line="1" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/settings.py" timestamp="1503858915084">
+        <mark key="[" line="15" column="59" />
+        <mark key="]" line="15" column="58" />
+        <mark key="^" line="15" column="58" />
+        <mark key="." line="15" column="58" />
+      </file>
+      <file name="$USER_HOME$/Projects/algos/lcm.py" timestamp="1503417146990">
+        <mark key="[" line="0" column="6" />
+        <mark key="]" line="0" column="6" />
+        <mark key="." line="0" column="6" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/error_handler.py" timestamp="1503869073005">
+        <mark key="[" line="43" column="21" />
+        <mark key="]" line="45" column="58" />
+        <mark key="." line="45" column="58" />
+        <mark key="^" line="45" column="58" />
+      </file>
+      <file name="/Python Console" timestamp="1503831925869">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/tg/__main__.py" timestamp="1503867603120">
+        <mark key="[" line="21" column="0" />
+        <mark key="]" line="21" column="0" />
+        <mark key="." line="21" column="0" />
+        <mark key="^" line="3" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/asciicubes/layer.py" timestamp="1503418361290">
+        <mark key="[" line="7" column="12" />
+        <mark key="]" line="1" column="0" />
+        <mark key="^" line="1" column="0" />
+        <mark key="." line="1" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/transactioninfo.py" timestamp="1503868169514">
+        <mark key="[" line="2" column="6" />
+        <mark key="]" line="2" column="6" />
+        <mark key="." line="2" column="6" />
+        <mark key="^" line="2" column="6" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/__init__.py" timestamp="1503867507635">
+        <mark key="[" line="5" column="0" />
+        <mark key="]" line="5" column="0" />
+        <mark key="." line="5" column="0" />
+        <mark key="^" line="12" column="3" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/bot_utils/error_handler.py" timestamp="1503428252323">
+        <mark key="[" line="25" column="44" />
+        <mark key="]" line="25" column="44" />
+        <mark key="." line="25" column="44" />
+        <mark key="^" line="25" column="43" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/api_error.py" timestamp="1503869172898">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/api.py" timestamp="1503868350665">
+        <mark key="[" line="5" column="6" />
+        <mark key="]" line="5" column="6" />
+        <mark key="." line="5" column="6" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/tg/__init__.py" timestamp="1503859038149">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="4" column="16" />
+        <mark key="^" line="4" column="16" />
+        <mark key="." line="4" column="16" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/tg/bot_states/admin.py" timestamp="1503867648810">
+        <mark key="[" line="0" column="29" />
+        <mark key="]" line="1" column="24" />
+        <mark key="." line="1" column="24" />
+        <mark key="^" line="1" column="24" />
+      </file>
+      <file name="/Dummy.txt" timestamp="1503771697767">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/algos/sieve_benchmark.py" timestamp="1503417296541">
+        <mark key="[" line="2" column="5" />
+        <mark key="]" line="2" column="5" />
+        <mark key="." line="2" column="5" />
+      </file>
+      <file name="$USER_HOME$/Projects/asciicubes/lines.py" timestamp="1503418253665">
+        <mark key="[" line="15" column="8" />
+        <mark key="]" line="15" column="8" />
+        <mark key="." line="15" column="8" />
+        <mark key="^" line="15" column="8" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/__init__.py" timestamp="1503868335290">
+        <mark key="[" line="23" column="22" />
+        <mark key="]" line="23" column="22" />
+        <mark key="^" line="23" column="22" />
+        <mark key="." line="23" column="22" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/pay.py" timestamp="1503868261692">
+        <mark key="[" line="0" column="6" />
+        <mark key="]" line="0" column="6" />
+        <mark key="." line="0" column="6" />
+      </file>
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/egrn_api/search.py" timestamp="1503868189926">
+        <mark key="[" line="5" column="13" />
+        <mark key="]" line="6" column="0" />
+        <mark key="." line="6" column="0" />
+        <mark key="^" line="6" column="0" />
+      </file>
       <file name="$USER_HOME$/Projects/fo_bot/fo_bot/bot_states/admin.py" timestamp="1503016404488">
         <mark key="[" line="7" column="10" />
         <mark key="]" line="7" column="11" />
         <mark key="." line="7" column="11" />
         <mark key="^" line="7" column="11" />
-      </file>
-      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/__main__.py" timestamp="1503317598098">
-        <mark key="'" line="199" column="14" />
-        <mark key="[" line="101" column="48" />
-        <mark key="]" line="101" column="52" />
-        <mark key="." line="101" column="52" />
-        <mark key="^" line="101" column="52" />
-      </file>
-      <file name="$USER_HOME$/Projects/algos/sorting.py" timestamp="1503417403169">
-        <mark key="'" line="29" column="1" />
-        <mark key="[" line="0" column="1" />
-        <mark key="]" line="0" column="1" />
-        <mark key="^" line="0" column="1" />
-        <mark key="." line="0" column="1" />
-      </file>
-      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/text.py" timestamp="1503016258005">
-        <mark key="[" line="10" column="43" />
-        <mark key="]" line="11" column="49" />
-        <mark key="^" line="11" column="49" />
-        <mark key="." line="11" column="49" />
-      </file>
-      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/settings.py" timestamp="1503015612021">
-        <mark key="[" line="9" column="66" />
-        <mark key="]" line="9" column="67" />
-        <mark key="^" line="30" column="27" />
-        <mark key="." line="9" column="67" />
       </file>
       <file name="$USER_HOME$/Projects/fo_bot/fo_bot/restricted.py" timestamp="1502999077189">
         <mark key="[" line="2" column="23" />
@@ -122,15 +228,11 @@
         <mark key="." line="3" column="0" />
         <mark key="^" line="3" column="0" />
       </file>
-      <file name="$USER_HOME$/Projects/algos/lcm.py" timestamp="1503417146990">
-        <mark key="[" line="0" column="6" />
-        <mark key="]" line="0" column="6" />
-        <mark key="." line="0" column="6" />
-      </file>
-      <file name="$USER_HOME$/Projects/algos/sieve.py" timestamp="1503417285569">
-        <mark key="[" line="30" column="0" />
-        <mark key="]" line="30" column="0" />
-        <mark key="." line="30" column="0" />
+      <file name="$USER_HOME$/Projects/fo_bot/fo_bot/bot_utils/__init__.py" timestamp="1503867039023">
+        <mark key="[" line="4" column="23" />
+        <mark key="]" line="4" column="23" />
+        <mark key="." line="4" column="23" />
+        <mark key="^" line="4" column="23" />
       </file>
       <file name="$USER_HOME$/Projects/algos/__init__.py" timestamp="1503417556574">
         <mark key="[" line="22" column="46" />
@@ -151,35 +253,35 @@
       <jump line="1" column="28" filename="$USER_HOME$/Projects/fo_bot/fo_bot/bot_utils/error_handler.py" />
     </jumps>
     <registers>
-      <register name="&quot;" type="4">
-        <text>message</text>
+      <register name="&quot;" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgICAgICAgICBpZiBlLnRleHQgPT0gJ1NlcnZpY2UgaXMgdGVtcG9yYXJpbHkgdW5hdmFpbGFibGUnOgo=</text>
       </register>
       <register name="-" type="4">
-        <text>message</text>
+        <text>functions</text>
       </register>
       <register name="0" type="4">
-        <text>182705944</text>
+        <text>e.text == 'Service is temporarily unavailable'</text>
       </register>
       <register name="1" type="2">
-        <text encoding="base64">ICAgIAo=</text>
+        <text encoding="base64">ICAgICAgICAgICAgICAgICAgICBpZiBlLnRleHQgPT0gJ1NlcnZpY2UgaXMgdGVtcG9yYXJpbHkgdW5hdmFpbGFibGUnOgo=</text>
       </register>
       <register name="2" type="2">
-        <text encoding="base64">IyBAYVxuYiA9PSBkZWYgYiguLi4pOiAuLi47IGIgPSBhKGIpCg==</text>
+        <text encoding="base64">ICAgIAo=</text>
       </register>
       <register name="3" type="2">
-        <text encoding="base64">ICAgIGE6IERvdAogICAgYjogRG90Cg==</text>
+        <text encoding="base64">ICAgICAgICAgICAgICAgIHVwZGF0ZS5lZmZlY3RpdmVfbWVzc2FnZS5yZXBseV90ZXh0KAogICAgICAgICAgICAgICAgICAgICfQmNC30LLQuNC90LjRgtC1LCDQv9GA0L7QuNC30L7RiNC70LAg0LrQsNC60LDRjy3RgtC+INC+0YjQuNCx0LrQsC4nCiAgICAgICAgICAgICAgICAgICAgJ9Cf0L7QttCw0LvRg9C50YHRgtCwLCDQv9C+0L/RgNC+0LHRg9C50YLQtSDQv9C+0LfQttC1LicKICAgICAgICAgICAgICAgICkK</text>
       </register>
       <register name="4" type="2">
-        <text encoding="base64">ZAo=</text>
+        <text encoding="base64">ICAgICAgICAgICAgCg==</text>
       </register>
       <register name="5" type="2">
-        <text encoding="base64">ICAgIHByaW50KCkK</text>
+        <text encoding="base64">ICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHJldHVybgo=</text>
       </register>
       <register name="6" type="2">
-        <text encoding="base64">ICAgIHBhc3MK</text>
+        <text encoding="base64">ICAgICAgICAgICAgZXhjZXB0IAo=</text>
       </register>
       <register name="7" type="2">
-        <text encoding="base64">Cg==</text>
+        <text encoding="base64">CmZyb20gZm9fYm90LmVncm5fYXBpIGltcG9ydCBBUElPYmplY3QK</text>
       </register>
       <register name="w" type="4">
         <keys>
@@ -203,10 +305,10 @@
         </keys>
       </register>
       <register name="8" type="2">
-        <text encoding="base64">ZnJvbSBnb29nbGVtYXBzLmV4Y2VwdGlvbnMgaW1wb3J0IEFwaUVycm9yLCBUcmFuc3BvcnRFcnJvciwgVGltZW91dAo=</text>
+        <text encoding="base64">ZnJvbSB0eXBpbmcgaW1wb3J0IExpc3QKCg==</text>
       </register>
       <register name="9" type="2">
-        <text encoding="base64">ICAgIHByaW50KG5hbWUpCg==</text>
+        <text encoding="base64">Cg==</text>
       </register>
       <register name=":" type="4">
         <text>w</text>

@@ -183,3 +183,173 @@
 
 # 2017-08-22 21:47:40.084629
 +exit()
+
+# 2017-08-27 14:04:06.368740
++6 * 14
+
+# 2017-08-27 14:04:17.079392
++from algos import factorize
+
+# 2017-08-27 14:05:33.602627
++factorize(84)
+
+# 2017-08-27 14:05:39.893875
++list(factorize(84))
+
+# 2017-08-27 14:06:21.497222
++p = 1
+
+# 2017-08-27 14:07:22.048560
++for i in range(1, 10):
++    print(list(factorize(p)))
++    p += (i + 1) ** 2
+
+# 2017-08-27 14:07:41.415319
++p
+
+# 2017-08-27 14:08:56.319190
++for i in range(1, 10):
++    print(i, list(factorize(p)))
++    p += (i + 1) ** 2
+
+# 2017-08-27 14:09:02.426207
++p = 1
+
+# 2017-08-27 14:09:04.879668
++for i in range(1, 10):
++    print(i, list(factorize(p)))
++    p += (i + 1) ** 2
+
+# 2017-08-27 14:09:58.785774
++a = 2
+
+# 2017-08-27 14:11:18.765918
++p = 1
+
+# 2017-08-27 14:12:45.851187
++for i in range(1, 10):
++    *f, s = list(factorize(p))
++    f = sum(f)
++    f, s = min(f, s), max(f, s)
++    print(i, f, s)
++    p += (i + 1) ** 2
+
+# 2017-08-27 14:13:04.751199
++for i in range(2, 10):
++    *f, s = list(factorize(p))
++    f = sum(f)
++    f, s = min(f, s), max(f, s)
++    print(i, f, s)
++    p += (i + 1) ** 2
+
+# 2017-08-27 14:13:24.639325
++for i in range(1, 10):
++    p += (i + 1) ** 2
++    *f, s = list(factorize(p))
++    f = sum(f)
++    f, s = min(f, s), max(f, s)
++    print(i, f, s)
+
+# 2017-08-27 14:13:41.297860
++for i in range(1, 10):
++    p += (i + 1) ** 2
++    *f, s = list(factorize(p))
++    f = sum(f)
++    f, s = min(f, s), max(f, s)
++    print(i + 1, f, s)
+
+# 2017-08-27 14:13:48.069249
++p = 1
+
+# 2017-08-27 14:13:50.176563
++for i in range(1, 10):
++    p += (i + 1) ** 2
++    *f, s = list(factorize(p))
++    f = sum(f)
++    f, s = min(f, s), max(f, s)
++    print(i + 1, f, s)
+
+# 2017-08-27 14:54:21.643744
++from functools import accumulate 
+
+# 2017-08-27 14:54:30.898064
++from itertools import accumulate
+
+# 2017-08-27 14:54:42.588500
++from operator import mul
+
+# 2017-08-27 14:54:47.891635
++mul(2, 3)
+
+# 2017-08-27 14:56:09.231029
++from functools import reduce
+
+# 2017-08-27 16:37:50.740923
++for i in range(1, 10):
++    p += (i + 1) ** 2
++    *f, s = list(factorize(p))
++    f = reduce(mul, f)
++    f, s = min(f, s), max(f, s)
++    print(i + 1, f, s)
+
+# 2017-08-27 16:38:18.993825
++for i in range(1, 10):
++    p += (i + 1) ** 2
++    *f, s = list(factorize(p))
++    f = reduce(mul, f, 1)
++    f, s = min(f, s), max(f, s)
++    print(i + 1, f, s)
+
+# 2017-08-27 16:38:24.078722
++p = 1
+
+# 2017-08-27 16:38:26.274579
++for i in range(1, 10):
++    p += (i + 1) ** 2
++    *f, s = list(factorize(p))
++    f = reduce(mul, f, 1)
++    f, s = min(f, s), max(f, s)
++    print(i + 1, f, s)
+
+# 2017-08-27 16:41:15.092491
++for i in range(1, 10):
++    p += (i + 1) ** 2
++    *f, s = list(factorize(p))
++    f = reduce(mul, f, 1)
++    f, s = min(f, s), max(f, s)
++    print(i + 1, f, s, list(factorize(p)))
+
+# 2017-08-27 16:41:17.467583
++p = 1
+
+# 2017-08-27 16:41:19.709879
++for i in range(1, 10):
++    p += (i + 1) ** 2
++    *f, s = list(factorize(p))
++    f = reduce(mul, f, 1)
++    f, s = min(f, s), max(f, s)
++    print(i + 1, f, s, list(factorize(p)))
+
+# 2017-08-27 17:27:20.613433
++list(factorize(278))
+
+# 2017-08-27 17:27:30.072358
++list(factorize(178))
+
+# 2017-08-27 17:44:11.514455
++100 ** 2 - 2 * 178 * 278
+
+# 2017-08-28 20:15:50.195758
++from algos import factorize
+
+# 2017-08-28 20:16:22.180548
++block = 10
+
+# 2017-08-28 20:16:33.350206
++list(factorize(block * 6))
+
+# 2017-08-28 22:21:58.328262
++35 + 49 + 81
+
+# 2017-08-28 22:22:10.792997
++165 / 9
