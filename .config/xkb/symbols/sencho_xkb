@@ -2,6 +2,6 @@ xkb_symbols "default" {
   key <TLDE> { [ asciitilde, grave ] };
 };
 
-xkb_symbols "msi" {
+xkb_symbols "bob" {
   key <PGUP> { [ VoidSymbol ] };
 };

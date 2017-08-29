@@ -132,7 +132,7 @@ download_ftp() {
 
 yadm_add_all() {
   name=$1
-  imp_dirs=(~/bin ~/.zshrc.d ~/.config/nvim ~/.config/i3 ~/.config/vimfx ~/.config/xkb ~/.ptpython ~/.config/pycharm/config ~/.config/termite)
+  imp_dirs=(~/bin ~/.zshrc.d ~/.config/nvim ~/.config/i3 ~/.config/vimfx ~/.config/xkb ~/.config/termite)
   for imp_dir in $imp_dirs
   do
     yadm add $imp_dir

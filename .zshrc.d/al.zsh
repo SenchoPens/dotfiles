@@ -33,6 +33,10 @@ alias ptpy='ptipython'  # cool console (i)python REPL
 
 # pacaur - a wrapper around AUR
 alias pin='pacaur -S --noedit'
+# search is in fu.zsh
+alias pup='pacaur -Syu'  # Update system
+# Remove package and it's dependencies which are not required by any other installed package
+alias pre='pacaur -Rs'
 
 # Various
 alias todo='task add'

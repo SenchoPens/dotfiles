@@ -1,3 +1,24 @@
-#!/bin/bash
-setxkbmap -layout "us+sencho_xkb(default)+sencho_xkb(msi),ru(winkeys)" -option "" -option "grp:rshift_toggle,grp_led:caps,caps:ctrl_modifier" -print | xkbcomp -I"$HOME/.config/xkb" - "${DISPLAY%%.*}"
+#!/usr/bin/env bash
+
+XKB_DIR="$HOME/.config/xkb"
+XKB_SYMBOL_FILE="sencho_xkb"
+# hostname binary with path
+HOSTN=$(which hostname)
+# grep binary with path
+GREPPR=$(which grep)
+
+HOST=""
+XKB_ADDON=""
+if [ -n "$HOSTN" ]; then
+    HOST=$($HOSTN -f)
+    if [[ -n $HOST && -n "$($GREPPR $HOST $XKB_DIR/symbols/$XKB_SYMBOL_FILE)" ]]; then
+        XKB_ADDON="+$XKB_SYMBOL_FILE($HOST)"
+    fi
+fi
+
+if [[ -n $(which setxkbmap) && -n $(which xkbcomp) ]]; then
+    setxkbmap -layout "us+$XKB_SYMBOL_FILE(default)$XKB_ADDON,ru(winkeys)" \
+    -option "" -option "grp:rshift_toggle,grp_led:caps,caps:ctrl_modifier" -print \
+    | xkbcomp -I"$XKB_DIR" - "${DISPLAY%%.*}" >/dev/null 2>&1
+fi
 
