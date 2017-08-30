@@ -10,7 +10,8 @@ ins nerd-fonts-complete
 ins zsh antigen fortune-mod thefuck
 
 # python
-ins python2 python2-pip python3 python3-pip
+ins python2 python2-pip python3 python3-pip ptpython
+pip3 install ipython
 
 # neovim
 ins neovim ruby
