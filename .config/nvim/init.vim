@@ -32,5 +32,15 @@ set autoread
 syntax enable
 
 " Make Y behave like other capitals
-:map Y y$
+map Y y$
+
+" Change between buffers
+map <C-J> :bprev<CR>
+map <C-K> :bnext<CR>
+
+" Change between windows
+map <C-H> <C-W>h
+map <C-L> <C-W>l
+map <C-I> <C-W>k
+map <C-M> <C-W>j
 

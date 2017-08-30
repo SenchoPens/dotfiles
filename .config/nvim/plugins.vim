@@ -59,11 +59,22 @@ let g:airline#extensions#tabline#enabled = 1
 
 " NerdTree
 autocmd vimenter * NERDTree  " autload nerdtree
-autocmd vimenter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " autoclose nerdtree if it the only one left
 
 " Enable solarized
 set termguicolors
 set background=dark
 colorscheme NeoSolarized
+
+" Neomake
+autocmd! BufWritePost * Neomake
+let g:neomake_python_flake8_maker = {
+    \ 'args': ['--ignore=E221,E241,E272,E251,W702,E203,E201,E202',  '--format=default'],
+    \ 'errorformat':
+        \ '%E%f:%l: could not compile,%-Z%p^,' .
+        \ '%A%f:%l:%c: %t%n %m,' .
+        \ '%A%f:%l: %t%n %m,' .
+        \ '%-G%.%#',
+    \ }
+let g:neomake_python_enabled_makers = ['flake8']
 
