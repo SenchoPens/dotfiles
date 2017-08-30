@@ -20,6 +20,7 @@ sudo pip3 install neovim
 gem install neovim
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/installer.sh
 /tmp/install.sh ~/.local/share/dein
+ins flake8
 
 # i3
 ins compton
