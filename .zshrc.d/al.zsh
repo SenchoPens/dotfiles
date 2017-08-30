@@ -49,6 +49,9 @@ alias lc='colorls -r -sd'  # ls with icons
 # yadm (git for dotfiles)
 alias yacam='yadm commit -am'
 alias yadd='yadm add'
+alias yapu='yadm push'
+alias yapul='yadm pull'
+alias yastat='yadm status'
 
 # Multimedia
 alias enpl='launch_mplayer eng,rus,jap'
