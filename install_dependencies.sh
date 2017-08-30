@@ -24,6 +24,8 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 ins compton
 ins light
 ins py3status
+
+# arc gtk theme
 ins arc-gtk-theme
 ins arc-firefox-theme
 ins arc-icon-theme

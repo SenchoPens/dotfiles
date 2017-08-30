@@ -67,6 +67,7 @@ set background=dark
 colorscheme NeoSolarized
 
 " Neomake
+autocmd BufAdd * Neomake
 autocmd! BufWritePost * Neomake
 let g:neomake_python_flake8_maker = {
     \ 'args': ['--ignore=E221,E241,E272,E251,W702,E203,E201,E202',  '--format=default'],
