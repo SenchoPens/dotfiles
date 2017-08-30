@@ -7,7 +7,7 @@ alias ins='pacaur -S'
 ins nerd-fonts-complete
 
 # terminal-related
-ins zsh antigen fortune-mod thefuck
+ins zsh antigen fortune-mod thefuck translate-shell
 
 # python
 ins python2 python2-pip python3 python3-pip ptpython
