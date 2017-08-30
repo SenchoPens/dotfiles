@@ -55,6 +55,8 @@ let g:airline_section_z = '%{strftime("%c")}'
 let g:airline_theme='bubblegum'
 let g:airline_skip_empty_sections = 1
 
+let g:airline#extensions#tabline#enabled = 1
+
 " NerdTree
 autocmd vimenter * NERDTree  " autload nerdtree
 autocmd vimenter * wincmd p

@@ -19,9 +19,14 @@ def gen_print(file):
 def parse_args():
     parser = argparse.ArgumentParser(prog='i3wp-gen', description='Generates i3 workspaces config')
     parser.add_argument('dir', help='path to i3wm config directory', type=str)
+
     parser.add_argument('--roman', help='display workspaces with roman letters',
                         action='store_true')
+
     parser.add_argument('--arrows', help='display arrows to workspaces',
+                        action='store_true')
+
+    parser.add_argument('--spaces', help='add spaces between wp number and the rest',
                         action='store_true')
     return parser.parse_args()
 
@@ -41,6 +46,8 @@ def good_maker(args):
             res = ': '.join((roman(i), res))
         if args.arrows:
             res = add_arrows(i, res)
+        if args.spaces:
+            res = ' ' + res
         res = f'{i}:{res}'
         return res
     return make_good
