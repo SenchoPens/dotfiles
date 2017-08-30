@@ -2,7 +2,8 @@
 
 # generate workspaces from $I3_CONFIG_DIR/workspaces file
 echo 'Assembling...'
-i3wp-gen $I3CONFDIR --roman 
+#i3wp-gen $I3CONFDIR --roman 
+i3wp-gen $I3CONFDIR
 cd $I3CONFDIR
 cat $(ls *.conf) > config
 

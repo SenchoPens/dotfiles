@@ -66,17 +66,6 @@ workspace_auto_back_and_forth yes
 
 # vim:filetype=i3
 
-### i3-gaps config ###
-# disable window titlebars
-for_window [class="^.*"] border pixel 0
-
-smart_gaps on
-
-gaps inner 15
-gaps outer 5
-
-# vim:filetype=i3
-
 ### KEYBINDINGS CONFIG ###
 bindsym F1 nop
 
@@ -167,7 +156,7 @@ mode "app launch" {
         bindsym j exec jetbrains-toolbox
         bindsym m exec Telegram
 
-        bindsym a exec firefox; exec Telegram; exec jetbrains-toolbox
+        bindsym a exec firefox; exec telegram-desktop; exec jetbrains-toolbox
         bindsym t exec $terminal; exec $terminal
 
         bindsym Return mode "default"
@@ -189,16 +178,16 @@ bindsym $mod+i exec gnome-terminal --hide-menubar -e ranger; floating toggle
 # vim:filetype=i3
 
 ### WORKSPACES CONFIG ###
-set $workspace1 "1:I: "
-set $workspace2 "2:II: "
-set $workspace3 "3:III: "
-set $workspace4 "4:IV: "
-set $workspace5 "5:V: "
-set $workspace6 "6:VI: "
-set $workspace7 "7:VII: "
-set $workspace8 "8:VIII: "
-set $workspace9 "9:IX: "
-set $workspace10 "10:X: "
+set $workspace1 "1:"
+set $workspace2 "2:"
+set $workspace3 "3:"
+set $workspace4 "4:"
+set $workspace5 "5:"
+set $workspace6 "6:"
+set $workspace7 "7:"
+set $workspace8 "8:"
+set $workspace9 "9:"
+set $workspace10 "10:"
 
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
