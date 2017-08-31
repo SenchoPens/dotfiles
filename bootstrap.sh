@@ -11,7 +11,7 @@ ins zsh antigen fortune-mod thefuck translate-shell
 
 # python
 ins python2 python2-pip python3 python3-pip ptpython
-pip3 install ipython
+pip3 install ipython schedule
 
 # neovim
 ins neovim ruby
