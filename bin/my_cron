@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+
+import os
+import time
+
+import schedule
+
+from pick_wp import pick_wallpaper
+
+
+schedule.every(20).minutes.do(lambda: pick_wallpaper(os.environ['WPDIR']))
+
+
+if __name__ == '__main__':
+    while True:
+        schedule.run_pending()
+        time.sleep(20)
+
