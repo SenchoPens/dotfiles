@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+#ToDo: port to Ansible
+
 pacman -S pacaur
 alias ins='pacaur -S'
 
@@ -31,4 +33,3 @@ ins py3status
 ins arc-gtk-theme
 ins arc-firefox-theme
 ins arc-icon-theme
-
