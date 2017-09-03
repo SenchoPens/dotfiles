@@ -23,6 +23,9 @@ nnoremap <space> za
 set relativenumber
 set number
 
+" Autowrite on disk on buffer switching, exit, etc
+set autowrite
+
 filetype plugin on
 filetype indent on
 set so=10
