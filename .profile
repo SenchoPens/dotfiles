@@ -1,6 +1,8 @@
 export SHELL=/bin/zsh
-export PATH=/home/sencho/bin:$PATH
 export EDITOR=/usr/bin/nvim
-export PYTHONPATH=$PYTHONPATH:/home/sencho/Projects/
+export PYTHONPATH=$PYTHONPATH:~/Projects/:~/bin/:
+export I3CONFDIR=~/.config/i3
+export WPDIR=~/Images/Wallpapers/slideshow
+export PATH=$PATH:~/bin/:$(ruby -e 'print Gem.user_dir')/bin:
 
 zsh --login

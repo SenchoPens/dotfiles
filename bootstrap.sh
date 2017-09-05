@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+#ToDo: port to Ansible
+
 pacman -S pacaur
 alias ins='pacaur -S'
 
@@ -11,7 +13,7 @@ ins zsh antigen fortune-mod thefuck translate-shell
 
 # python
 ins python2 python2-pip python3 python3-pip ptpython
-pip3 install ipython
+pip3 install ipython schedule
 
 # neovim
 ins neovim ruby
@@ -31,4 +33,3 @@ ins py3status
 ins arc-gtk-theme
 ins arc-firefox-theme
 ins arc-icon-theme
-
