@@ -1,9 +1,11 @@
-" source plugin settings before general settings
+" source other settings before general settings
 let config_dir = expand("~/.config/nvim/")
-let plugins_file = config_dir . 'plugins.vim'
-if filereadable(plugins_file)
-  exec 'source ' . plugins_file
-endif
+let config_files = ['plugins.vim', 'automake.vim']
+for config_file in config_files
+  if filereadable(config_file)
+    exec 'source ' . config_file
+  endif
+endfor
 
 " GENERAL SETTINGS
 " Tabs
@@ -40,10 +42,20 @@ map Y y$
 " Change between buffers
 map <C-J> :bprev<CR>
 map <C-K> :bnext<CR>
+tnoremap <C-J> <C-\><C-N>:bprev<CR>
+tnoremap <C-K> <C-\><C-N>:bnext<CR>
 
 " Change between windows
 map <C-H> <C-W>h
 map <C-L> <C-W>l
 map <C-I> <C-W>k
 map <C-M> <C-W>j
+tnoremap <C-H> <C-\><C-N><C-W>h
+tnoremap <C-L> <C-\><C-N><C-W>l
+tnoremap <C-I> <C-\><C-N><C-W>k
+tnoremap <C-M> <C-\><C-N><C-W>j
+
+
+" Set ergonomic <leader> key
+:let mapleader = ","
 

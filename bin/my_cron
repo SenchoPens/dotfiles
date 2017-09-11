@@ -1,14 +1,59 @@
 #!/usr/bin/python3
 
 import os
+import subprocess
 import time
 
 import schedule
+import sh
 
 from pick_wp import pick_wallpaper
 
 
+BEST_WASTING_TIME = '19:30'
+
+
+class TimeWasting:
+    def __init__(self, browser=sh.firefox):
+        self.wasters = {}
+        self.browser = browser
+
+    def establish(self, **kwargs):
+        for day in (
+            'monday', 'tuesday', 'wednesday', 'thursday',
+            'friday', 'saturday', 'sunday',
+        ):
+            t = kwargs.get(day, BEST_WASTING_TIME)
+            for waster, limit in self.get_wasters():
+                schedule.every().__getattribute__(day).at(t).do(lambda: self._waste_time(waster))
+                t += limit
+
+    def add_waster(self, waster, limit=5):
+        self.wasters[waster] = limit
+
+    def get_wasters(self):
+        yield from self.wasters.items()
+        yield ('END', 5)
+
+    def _waste_time(self, waster):
+        sh.notify_send(f'{waster} began')
+        if '.' in waster:
+            self.browser(waster)
+        else:
+            subprocess.run(waster)
+
+
+# startup
+pick_wallpaper(os.environ['WPDIR'])
+
 schedule.every(20).minutes.do(lambda: pick_wallpaper(os.environ['WPDIR']))
+
+# wasters
+wasting = TimeWasting()
+wasting.add_waster('twitter.com', 10)
+wasting.add_waster('gmail.com', 2)
+wasting.add_waster('vk.com', 8)
+wasting.establish()
 
 
 if __name__ == '__main__':

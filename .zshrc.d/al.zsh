@@ -3,9 +3,9 @@ alias zypper='sudo zypper'
 alias mount='sudo mount'
 alias umount='sudo umount'
 alias fdisk='sudo fdisk'
-alias pip3='sudo pip3'
-alias pip='sudo pip'
-alias pip2='sudo pip2'
+alias spip3='sudo pip3'
+alias spip='sudo pip'
+alias spip2='sudo pip2'
 
 # Hashes
 hash -d pproj=~/Projects
@@ -28,7 +28,9 @@ alias tobinf='tobin -n'
 alias jpy='nonohup jupyter notebook'
 # coconut - function programming python-like language
 alias jco='coconut --target 36 --jupyter notebook'
-alias pipin='pip3 install --user'
+alias pipin='pip install --user'
+alias pipin2='pip2 install --user'
+alias pipin3='pip3 install --user'
 alias ptpy='ptipython'  # cool console (i)python REPL
 
 # pacaur - a wrapper around AUR

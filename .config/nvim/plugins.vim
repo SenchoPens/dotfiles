@@ -9,19 +9,28 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   " Required:
   call dein#add('/home/sencho/.local/share/dein/repos/github.com/Shougo/dein.vim') 
   " Add or remove your plugins here:
+  "
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/deoplete.nvim')
+
   call dein#add('icymind/NeoSolarized')
   call dein#add('zchee/deoplete-jedi')
   call dein#add('neomake/neomake')
+
   call dein#add('scrooloose/nerdtree')
+  call dein#add('scrooloose/nerdcommenter')
+
   call dein#add('Xuyuanp/nerdtree-git-plugin')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
+  call dein#add('PotatoesMaster/i3-vim-syntax')
+
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
-  call dein#add('PotatoesMaster/i3-vim-syntax')
+
+  call dein#add('tpope/vim-surround')
+  call dein#add('tpope/vim-repeat')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -57,10 +66,6 @@ let g:airline_skip_empty_sections = 1
 
 let g:airline#extensions#tabline#enabled = 1
 
-" NerdTree
-autocmd vimenter * NERDTree  " autload nerdtree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " autoclose nerdtree if it the only one left
-
 " Enable solarized
 set termguicolors
 set background=dark
@@ -78,4 +83,9 @@ let g:neomake_python_flake8_maker = {
         \ '%-G%.%#',
     \ }
 let g:neomake_python_enabled_makers = ['flake8']
+
+" NerdTree
+autocmd vimenter * NERDTree  " autload nerdtree
+autocmd vimenter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " autoclose nerdtree if it the only one left
 
