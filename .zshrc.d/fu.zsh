@@ -139,3 +139,7 @@ yadm_add_all() {
   done
 }
 
+dd_to_sdb() {
+  sudo dd if=$1 of=/dev/sdb
+}
+
