@@ -25,7 +25,7 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 ins flake8
 
 # i3
-ins compton
+ins compton i3-scrot
 ins light
 ins py3status
 
