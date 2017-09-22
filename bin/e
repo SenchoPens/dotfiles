@@ -10,6 +10,8 @@ PREV_FILE = '/tmp/e'
 
 
 def read_executable(name):
+    if not name.endswith('.py'):
+        name += '.py'
     executable = pathlib.Path(name)
     print(executable)
     if not executable.exists():
@@ -25,7 +27,7 @@ def main():
         sys.argv.remove(arg)
 
     def run_executable(executable):
-        subprocess.run(command + [executable.absolute()])
+        subprocess.run(command + [executable])
         with open(PREV_FILE, 'w') as f:
             f.write(str(executable.absolute()))
 
