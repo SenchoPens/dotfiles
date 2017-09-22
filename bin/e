@@ -1,0 +1,43 @@
+#!/usr/bin/python3
+# vim:filetype=py
+
+import sys
+import pathlib
+import subprocess
+
+
+PREV_FILE = '/tmp/e'
+
+
+def read_executable(name):
+    executable = pathlib.Path(name)
+    print(executable)
+    if not executable.exists():
+        print('Not an executable')
+        sys.exit(1)
+    return executable
+
+
+def main():
+    command = ['python3']
+    for arg in (arg for arg in sys.argv if arg.startswith('-')):
+        command.append(arg)
+        sys.argv.remove(arg)
+
+    def run_executable(executable):
+        subprocess.run(command + [executable.absolute()])
+        with open(PREV_FILE, 'w') as f:
+            f.write(str(executable.absolute()))
+
+    if len(sys.argv) == 1:
+        try:
+            with open(PREV_FILE) as f:
+                run_executable(read_executable(f.readline()))
+        except FileNotFoundError:
+            print('No prev file')
+    else:
+        run_executable(read_executable(sys.argv[1]))
+
+
+main()
+

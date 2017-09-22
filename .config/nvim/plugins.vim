@@ -17,6 +17,7 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('icymind/NeoSolarized')
   call dein#add('zchee/deoplete-jedi')
   call dein#add('neomake/neomake')
+  call dein#add('kassio/neoterm')
 
   call dein#add('scrooloose/nerdtree')
   call dein#add('scrooloose/nerdcommenter')
@@ -70,6 +71,10 @@ let g:airline#extensions#tabline#enabled = 1
 set termguicolors
 set background=dark
 colorscheme NeoSolarized
+
+" Neoterm
+let g:neoterm_direct_open_repl = 1
+let g:neoterm_keep_term_open = 0
 
 " Neomake
 autocmd BufAdd * Neomake

@@ -1,18 +1,15 @@
 " Change between buffers
 map <C-J> :bprev<CR>
 map <C-K> :bnext<CR>
-tnoremap <C-J> <C-\><C-N>:bprev<CR>
-tnoremap <C-K> <C-\><C-N>:bnext<CR>
 
 " Change between windows
 map <C-H> <C-W>h
 map <C-L> <C-W>l
 map <C-I> <C-W>k
 map <C-M> <C-W>j
-tnoremap <C-H> <C-\><C-N><C-W>h
-tnoremap <C-L> <C-\><C-N><C-W>l
-tnoremap <C-I> <C-\><C-N><C-W>k
-tnoremap <C-M> <C-\><C-N><C-W>j
+tnoremap <ESC> <C-\><C-n>
+autocmd BufWinEnter,WinEnter term://* startinsert
+"autocmd BufLeave term://* stopinsert
 
 " source other settings before general settings
 let config_dir = expand("~/.config/nvim/")
@@ -25,8 +22,7 @@ for config_file in config_files
 endfor
 
 " GENERAL SETTINGS
-" Tabs
-set tabstop=2
+" Tabs set tabstop=2
 set shiftwidth=2
 set smarttab
 set expandtab

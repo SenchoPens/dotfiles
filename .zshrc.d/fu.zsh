@@ -143,3 +143,7 @@ dd_to_sdb() {
   sudo dd if=$1 of=/dev/sdb
 }
 
+winformat() {
+  sudo mkfs -t vfat $1
+}
+

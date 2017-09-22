@@ -18,6 +18,8 @@ hash -d ins=~/.installer.sh
 # Words translation and definition
 alias ten='trans :en'
 alias tru='trans :ru'
+alias teni='trans :en -I'
+alias trui='trans :ru -I'
 alias urbdict='zdict --dict urban'
 
 # My progs
@@ -47,6 +49,10 @@ alias rg='ranger'
 # ls
 alias ls='ls --color -h --group-directories-first'
 alias lc='colorls -r -sd'  # ls with icons
+
+# simultanious cd
+alias ds='pwd > /tmp/cwd'
+alias dr='cd "$(</tmp/cwd)"'
 
 # yadm (git for dotfiles)
 alias yacam='yadm commit -am'
