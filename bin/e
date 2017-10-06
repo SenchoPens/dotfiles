@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-# vim:filetype=py
+#vim:filetype=py
 
 import sys
 import pathlib
 import subprocess
 
 
-PREV_FILE = '/tmp/e'
+PREV_FILE = '/tmp/e_file'
+INPUT_FILE = '/tmp/e_input'
 
 
 def read_executable(name):
@@ -20,8 +21,22 @@ def read_executable(name):
     return executable
 
 
+def catch_input():
+    try:
+        while True:
+            yield input()
+    except (EOFError, KeyboardInterrupt):
+        return
+
+
 def main():
     command = ['python3']
+
+    repeat_last_input = False
+    if len(sys.argv) > 1 and sys.argv[1] == 'r':
+        repeat_last_input = True
+        sys.argv.pop(1)
+
     for arg in (arg for arg in sys.argv if arg.startswith('-')):
         command.append(arg)
         sys.argv.remove(arg)

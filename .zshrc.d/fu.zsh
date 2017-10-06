@@ -98,7 +98,7 @@ ranger() {
     fi
 }
 
-launch_mplayer() {
+launch_gmplayer() {
   gmplayer -alang $1 -slang eng,rus -ass-border-color 000000FF -ass-color FFD630FF -ass-force-style FontName=Serif -subpos 93 $2
 }
 
