@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# vim:filetype=py
+#vim:filetype=py
 
 import sys
 import pathlib
@@ -26,8 +26,8 @@ def main():
         command.append(arg)
         sys.argv.remove(arg)
 
-    def run_executable(executable):
-        subprocess.run(command + [executable])
+    def run_executable(executable, **kwargs):
+        subprocess.run(command + [executable], **kwargs)
         with open(PREV_FILE, 'w') as f:
             f.write(str(executable.absolute()))
 
@@ -37,8 +37,10 @@ def main():
                 run_executable(read_executable(f.readline()))
         except FileNotFoundError:
             print('No prev file')
-    else:
+    elif len(sys.argv) == 2:
         run_executable(read_executable(sys.argv[1]))
+    else:
+        run_executable(read_executable(sys.argv[1]), input=open(sys.argv[2], 'rb').read())
 
 
 main()
