@@ -22,6 +22,22 @@ for config_file in config_files
 endfor
 
 " GENERAL SETTINGS
+" This will enable the usage of your mouse inside Vim
+set mouse=a
+
+" This option speeds up macro execution in Vim
+set lazyredraw
+
+" This will enable Vim's spell checking feature
+set spell spelllang=en,ru
+
+" This will make Vim start searching the moment you start
+" typing the first letter of your search keyword
+set incsearch
+" This will make Vim highlight all search results that
+" matched the search keyword
+set hlsearch
+
 " Tabs set tabstop=2
 set shiftwidth=2
 set smarttab
@@ -37,6 +53,10 @@ nnoremap <space> za
 " Line numbers - absolute on cursor line and relative on other
 set relativenumber
 set number
+" This will highlight the current line your cursor is at
+set cursorline
+" This will highlight the current column your cursor is at
+set cursorcolumn
 
 " Autowrite on disk on buffer switching, exit, etc
 set autowrite

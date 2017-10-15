@@ -34,6 +34,7 @@ alias pipin='pip install --user'
 alias pipin2='pip2 install --user'
 alias pipin3='pip3 install --user'
 alias ptpy='ptipython'  # cool console (i)python REPL
+alias ptal='ptpy -i ~/.ptpython/algebra.py'
 
 # pacaur - a wrapper around AUR
 alias pin='pacaur -S --noedit'
@@ -62,8 +63,8 @@ alias yapul='yadm pull'
 alias yastat='yadm status'
 
 # Multimedia
-alias enpl='launch_mplayer eng,rus,jap'
-alias rupl='launch_mplayer rus,eng,jap'
+alias enpl='launch_gmplayer eng,rus,jap'
+alias rupl='launch_gmplayer rus,eng,jap'
 
 # Global
 alias -g L="| less"
@@ -78,7 +79,7 @@ alias unpack_tar='tar xf'
 
 # Aliases for automated file opening (better be in rifle?)
 alias -s txt=nvim
-alias -s {avi,mkv,mp4}=enpl
+alias -s {avi,mkv,mp4}=smplayer
 alias -s html='firefox'
 alias -s {jpg,jpeg,png,pdf}='nonohup okular'
 alias -s docx='nonohup libreoffice'

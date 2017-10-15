@@ -26,12 +26,16 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
   call dein#add('PotatoesMaster/i3-vim-syntax')
+  call dein#add('severin-lemaignan/vim-minimap')
+  call dein#add('suan/vim-instant-markdown')
 
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
 
   call dein#add('tpope/vim-surround')
   call dein#add('tpope/vim-repeat')
+
+  call dein#add('eagletmt/neco-ghc')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -93,4 +97,6 @@ let g:neomake_python_enabled_makers = ['flake8']
 autocmd vimenter * NERDTree  " autload nerdtree
 autocmd vimenter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " autoclose nerdtree if it the only one left
+" This will enable NERDTree to show hidden files
+let NERDTreeShowHidden=1
 
