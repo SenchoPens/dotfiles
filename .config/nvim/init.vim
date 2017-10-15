@@ -28,6 +28,9 @@ set mouse=a
 " This option speeds up macro execution in Vim
 set lazyredraw
 
+" This will enable Vim's spell checking feature
+set spell spelllang=en,ru
+
 " This will make Vim start searching the moment you start
 " typing the first letter of your search keyword
 set incsearch
