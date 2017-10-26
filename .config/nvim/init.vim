@@ -1,3 +1,6 @@
+" Set ergonomic <leader> key
+:let mapleader = ","
+
 " Change between buffers
 map <C-J> :bprev<CR>
 map <C-K> :bnext<CR>
@@ -26,7 +29,8 @@ endfor
 set mouse=a
 
 " This option speeds up macro execution in Vim
-set lazyredraw
+" I have drawing defects because of it
+"set lazyredraw
 
 " This will enable Vim's spell checking feature
 set spell spelllang=en,ru
@@ -71,7 +75,4 @@ syntax enable
 
 " Make Y behave like other capitals
 map Y y$
-
-" Set ergonomic <leader> key
-:let mapleader = ","
 

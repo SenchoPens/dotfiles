@@ -28,6 +28,8 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('PotatoesMaster/i3-vim-syntax')
   call dein#add('severin-lemaignan/vim-minimap')
   call dein#add('suan/vim-instant-markdown')
+  call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 }) 
+  call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
@@ -36,10 +38,7 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('tpope/vim-repeat')
 
   call dein#add('eagletmt/neco-ghc')
-
-  " You can specify revision/branch/tag.
-  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-
+  "
   " Required:
   call dein#end()
   call dein#save_state()
@@ -51,7 +50,6 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-
 " Load deoplete
 call deoplete#enable()
 
@@ -99,4 +97,8 @@ autocmd vimenter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " autoclose nerdtree if it the only one left
 " This will enable NERDTree to show hidden files
 let NERDTreeShowHidden=1
+
+" FZF
+nnoremap <leader>ls :Buffers<CR>
+nnoremap <leader>f :Files<CR>
 
