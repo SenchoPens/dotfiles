@@ -35,6 +35,7 @@ alias pipin2='pip2 install --user'
 alias pipin3='pip3 install --user'
 alias ptpy='ptipython'  # cool console (i)python REPL
 alias ptal='ptpy -i ~/.ptpython/algebra.py'
+alias jnq='jupyter notebook --browser="qutebrowser"'
 
 # pacaur - a wrapper around AUR
 alias pin='pacaur -S --noedit'
@@ -56,11 +57,11 @@ alias ds='pwd > /tmp/cwd'
 alias dr='cd "$(</tmp/cwd)"'
 
 # yadm (git for dotfiles)
-alias yacam='yadm commit -am'
-alias yadd='yadm add'
+alias ycam='yadm commit -am'
+alias ya='yadm add'
 alias yapu='yadm push'
 alias yapul='yadm pull'
-alias yastat='yadm status'
+alias yst='yadm status'
 
 # Multimedia
 alias enpl='launch_gmplayer eng,rus,jap'
