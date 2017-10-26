@@ -50,3 +50,5 @@ eval $(thefuck --alias)  # make fuck work
 # flames setup
 #SEGMENT_SEPARATOR="\uE0C0"
 
+# fzf setup
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

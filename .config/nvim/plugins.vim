@@ -5,19 +5,19 @@ set runtimepath+=/home/sencho/.local/share/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#begin('/home/sencho/.local/share/dein/')
 
-  " Let dein manage dein
   " Required:
   call dein#add('/home/sencho/.local/share/dein/repos/github.com/Shougo/dein.vim') 
-  " Add or remove your plugins here:
-  "
+ 
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('roxma/nvim-completion-manager')
+  "call dein#add('Shougo/deoplete.nvim')
 
   call dein#add('icymind/NeoSolarized')
-  call dein#add('zchee/deoplete-jedi')
-  call dein#add('neomake/neomake')
+  "call dein#add('zchee/deoplete-jedi')
+  "call dein#add('neomake/neomake')
   call dein#add('kassio/neoterm')
+  call dein#add('w0rp/ale')
 
   call dein#add('scrooloose/nerdtree')
   call dein#add('scrooloose/nerdcommenter')
@@ -38,7 +38,7 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('tpope/vim-repeat')
 
   call dein#add('eagletmt/neco-ghc')
-  "
+ 
   " Required:
   call dein#end()
   call dein#save_state()
@@ -48,10 +48,9 @@ endif
 if dein#check_install()
   call dein#install()
 endif
-
+" Recache runtimepath
+call dein#recache_runtimepath()
 "End dein Scripts-------------------------
-" Load deoplete
-call deoplete#enable()
 
 " Enable glyphs
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
@@ -78,18 +77,12 @@ colorscheme NeoSolarized
 let g:neoterm_direct_open_repl = 1
 let g:neoterm_keep_term_open = 0
 
-" Neomake
-autocmd BufAdd * Neomake
-autocmd! BufWritePost * Neomake
-let g:neomake_python_flake8_maker = {
-    \ 'args': ['--ignore=E221,E241,E272,E251,W702,E203,E201,E202',  '--format=default'],
-    \ 'errorformat':
-        \ '%E%f:%l: could not compile,%-Z%p^,' .
-        \ '%A%f:%l:%c: %t%n %m,' .
-        \ '%A%f:%l: %t%n %m,' .
-        \ '%-G%.%#',
-    \ }
-let g:neomake_python_enabled_makers = ['flake8']
+" ALE
+let g:ale_fixers = {
+\   'python': ['isort'],
+\}
+
+let g:ale_fix_on_save = 1
 
 " NerdTree
 autocmd vimenter * NERDTree  " autload nerdtree
