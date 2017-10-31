@@ -42,7 +42,7 @@ set incsearch
 " matched the search keyword
 set hlsearch
 
-" Tabs set tabstop=2
+set tabstop=4
 set shiftwidth=2
 set smarttab
 set expandtab

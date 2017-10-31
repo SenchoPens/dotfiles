@@ -19,12 +19,13 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('scrooloose/nerdtree')
   call dein#add('scrooloose/nerdcommenter')
 
+  call dein#add('airblade/vim-gitgutter')
   call dein#add('Xuyuanp/nerdtree-git-plugin')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
-  call dein#add('PotatoesMaster/i3-vim-syntax')
   call dein#add('severin-lemaignan/vim-minimap')
   call dein#add('suan/vim-instant-markdown')
+
   call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 }) 
   call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 
@@ -34,7 +35,11 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('tpope/vim-surround')
   call dein#add('tpope/vim-repeat')
 
+  call dein#add('PotatoesMaster/i3-vim-syntax')
+  call dein#add('rust-lang/rust.vim')
+
   call dein#add('eagletmt/neco-ghc')
+  call dein#add('zchee/deoplete-clang')
  
   " Required:
   call dein#end()
@@ -77,9 +82,22 @@ let g:neoterm_keep_term_open = 0
 " ALE
 let g:ale_fixers = {
 \   'python': ['isort'],
+\   'md': ['proselint'],
 \}
 
+" clangcheck for cpp throws non-existent include errors, 
+" so I disabled it
+let g:ale_linters = {
+\   'cpp': ['clang', 'clangtidy', 'cppcheck', 'cpplint', 'gcc', 'clang-format'],
+\   'haskell': ['ghc', 'stack-ghc', 'stack-build', 'ghc-mod', 'stack-ghc-mod', 'hlint', 'hdevtools', 'hfmt'],
+\}
+"\   'rust': ['rustc'],
+
 let g:ale_fix_on_save = 1
+let g:ale_sign_column_always = 1
+
+nmap <silent> <C-p> <Plug>(ale_previous_wrap)
+nmap <silent> <C-n> <Plug>(ale_next_wrap)
 
 " NerdTree
 autocmd vimenter * NERDTree  " autload nerdtree
@@ -91,4 +109,7 @@ let NERDTreeShowHidden=1
 " FZF
 nnoremap <leader>ls :Buffers<CR>
 nnoremap <leader>f :Files<CR>
+
+" Gitgutter
+let g:gitgutter_override_sign_column_highlight = 0
 
