@@ -6,6 +6,7 @@ alias fdisk='sudo fdisk'
 alias spip3='sudo pip3'
 alias spip='sudo pip'
 alias spip2='sudo pip2'
+alias wf='sudo wifi-menu'
 
 # Hashes
 hash -d pproj=~/Projects
@@ -21,10 +22,6 @@ alias tru='trans :ru'
 alias teni='trans :en -I'
 alias trui='trans :ru -I'
 alias urbdict='zdict --dict urban'
-
-# My progs
-alias pcomf='pcom -f'
-alias tobinf='tobin -n'
 
 # Python development
 alias jpy='nonohup jupyter notebook'
@@ -84,4 +81,7 @@ alias -s {avi,mkv,mp4}=smplayer
 alias -s html='firefox'
 alias -s {jpg,jpeg,png,pdf}='nonohup okular'
 alias -s docx='nonohup libreoffice'
+
+# cpp
+alias comp-ds='g++ -fsanitize=address,undefined -lpthread -x c++ -std=c++14 -O2 -Wall -Werror'
 

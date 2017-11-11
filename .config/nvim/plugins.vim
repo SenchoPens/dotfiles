@@ -11,23 +11,23 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('roxma/nvim-completion-manager')
-  "call dein#add('Shougo/deoplete.nvim')
+  call dein#add('eagletmt/neco-ghc')
+  call dein#add('zchee/deoplete-clang')
 
   call dein#add('icymind/NeoSolarized')
-  "call dein#add('zchee/deoplete-jedi')
-  "call dein#add('neomake/neomake')
   call dein#add('kassio/neoterm')
   call dein#add('w0rp/ale')
 
   call dein#add('scrooloose/nerdtree')
+  call dein#add('xuyuanp/nerdtree-git-plugin')
+  call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
+  call dein#add('ryanoasis/vim-devicons')
   call dein#add('scrooloose/nerdcommenter')
 
-  call dein#add('Xuyuanp/nerdtree-git-plugin')
-  call dein#add('ryanoasis/vim-devicons')
-  call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
-  call dein#add('PotatoesMaster/i3-vim-syntax')
+  call dein#add('airblade/vim-gitgutter')
   call dein#add('severin-lemaignan/vim-minimap')
   call dein#add('suan/vim-instant-markdown')
+
   call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 }) 
   call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 
@@ -37,7 +37,9 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('tpope/vim-surround')
   call dein#add('tpope/vim-repeat')
 
-  call dein#add('eagletmt/neco-ghc')
+  call dein#add('PotatoesMaster/i3-vim-syntax')
+  call dein#add('rust-lang/rust.vim')
+  call dein#add('alx741/vim-hindent')
  
   " Required:
   call dein#end()
@@ -80,9 +82,20 @@ let g:neoterm_keep_term_open = 0
 " ALE
 let g:ale_fixers = {
 \   'python': ['isort'],
+\   'md': ['proselint'],
 \}
 
+let g:ale_linters = {
+\   'cpp': ['clangtidy', 'cppcheck', 'cpplint', 'clang-format'],
+\   'haskell': ['ghc-mod', 'stack-ghc-mod', 'hlint', 'hdevtools', 'hfmt'],
+\}
+"\   'rust': ['rustc'],
+
 let g:ale_fix_on_save = 1
+let g:ale_sign_column_always = 1
+
+nmap <silent> <C-p> <Plug>(ale_previous_wrap)
+nmap <silent> <C-n> <Plug>(ale_next_wrap)
 
 let g:ale_sign_column_always = 1
 
@@ -96,3 +109,6 @@ let NERDTreeShowHidden=1
 " FZF
 nnoremap <leader>ls :Buffers<CR>
 nnoremap <leader>f :Files<CR>
+
+" Gitgutter
+let g:gitgutter_override_sign_column_highlight = 0

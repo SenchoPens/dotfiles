@@ -53,5 +53,12 @@ eval $(thefuck --alias)  # make fuck work
 # flames setup
 #SEGMENT_SEPARATOR="\uE0C0"
 
+# rustup completion
+fpath+=~/.zfunc
+
+# stack completion
+autoload -U +X bashcompinit && bashcompinit
+eval "$(stack --bash-completion-script stack)"
+
 # fzf setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
