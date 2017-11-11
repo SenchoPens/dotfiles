@@ -1,15 +1,4 @@
-!URxvt.font: xft:DejaVu Sans Mono for Powerline:size=12
-!URxvt.font: xft:Droid Sans Mono for Powerline:size=12
-!URxvt.font: xft:Hasklug Bold Nerd Font Complete:size=12
-!URxvt.font: xft:Meslo LG L DZ Italic for Powerline:size=12
-!URxvt.font: xft:afjsdofasdfsdghjashdk haksdjfh jas:size=12
-!URxvt.font: xft:DejaVu Sans Mono Nerd Font Complete:size=12
-!URxvt.font: xft:Knack Nerd Font:style=Regular:pixelsize=14 
 URxvt.font: xft:Knack Nerd Font:style=Book:size=12 
-!URxvt.font: xft:DejaVuSansMono Nerd Font:style=Bold:pixelsize=12
-!URxvt.font: xft:DejaVuSansMono Nerd Font
-!URxvt.font: xft:Hack:style=Bold:pixelsize=16
-!URxvt.font: xft:FuraCode Nerd Font
 URxvt.scrollBar: false
 
 ! URxvt clipboard
@@ -25,15 +14,9 @@ URxvt.keysym.C-M-v:    builtin-string:
 URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
 URxvt.keysym.C-S-0x56: eval:paste_clipboard
 
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-rofi.color-enabled: true
-rofi.color-window: #002b37, #002b37, #003642
-rofi.color-normal: #002b37, #819396, #002b37, #003642, #819396
-rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
-rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
-
+! ROFI
+show-icons: true
+rofi.modi: window,run,ssh,drun
 
 Xft.dpi: 96
 Xft.antialias: true

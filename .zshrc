@@ -41,6 +41,9 @@ antigen theme agnoster  # Load the theme.
 
 antigen apply
 
+# fish-like autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 for script in ~/.zshrc.d/*.zsh; do
   source $script
 done

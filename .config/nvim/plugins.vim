@@ -84,6 +84,8 @@ let g:ale_fixers = {
 
 let g:ale_fix_on_save = 1
 
+let g:ale_sign_column_always = 1
+
 " NerdTree
 autocmd vimenter * NERDTree  " autload nerdtree
 autocmd vimenter * wincmd p
@@ -94,4 +96,3 @@ let NERDTreeShowHidden=1
 " FZF
 nnoremap <leader>ls :Buffers<CR>
 nnoremap <leader>f :Files<CR>
-
