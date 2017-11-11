@@ -11,18 +11,20 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('roxma/nvim-completion-manager')
+  call dein#add('eagletmt/neco-ghc')
+  call dein#add('zchee/deoplete-clang')
 
   call dein#add('icymind/NeoSolarized')
   call dein#add('kassio/neoterm')
   call dein#add('w0rp/ale')
 
   call dein#add('scrooloose/nerdtree')
+  call dein#add('xuyuanp/nerdtree-git-plugin')
+  call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
+  call dein#add('ryanoasis/vim-devicons')
   call dein#add('scrooloose/nerdcommenter')
 
   call dein#add('airblade/vim-gitgutter')
-  call dein#add('Xuyuanp/nerdtree-git-plugin')
-  call dein#add('ryanoasis/vim-devicons')
-  call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
   call dein#add('severin-lemaignan/vim-minimap')
   call dein#add('suan/vim-instant-markdown')
 
@@ -37,9 +39,7 @@ if dein#load_state('/home/sencho/.local/share/dein/')
 
   call dein#add('PotatoesMaster/i3-vim-syntax')
   call dein#add('rust-lang/rust.vim')
-
-  call dein#add('eagletmt/neco-ghc')
-  call dein#add('zchee/deoplete-clang')
+  call dein#add('alx741/vim-hindent')
  
   " Required:
   call dein#end()
@@ -85,11 +85,9 @@ let g:ale_fixers = {
 \   'md': ['proselint'],
 \}
 
-" clangcheck for cpp throws non-existent include errors, 
-" so I disabled it
 let g:ale_linters = {
-\   'cpp': ['clang', 'clangtidy', 'cppcheck', 'cpplint', 'gcc', 'clang-format'],
-\   'haskell': ['ghc', 'stack-ghc', 'stack-build', 'ghc-mod', 'stack-ghc-mod', 'hlint', 'hdevtools', 'hfmt'],
+\   'cpp': ['clangtidy', 'cppcheck', 'cpplint', 'clang-format'],
+\   'haskell': ['ghc-mod', 'stack-ghc-mod', 'hlint', 'hdevtools', 'hfmt'],
 \}
 "\   'rust': ['rustc'],
 
@@ -112,4 +110,3 @@ nnoremap <leader>f :Files<CR>
 
 " Gitgutter
 let g:gitgutter_override_sign_column_highlight = 0
-

@@ -53,5 +53,9 @@ eval $(thefuck --alias)  # make fuck work
 # rustup completion
 fpath+=~/.zfunc
 
+# stack completion
+autoload -U +X bashcompinit && bashcompinit
+eval "$(stack --bash-completion-script stack)"
+
 # fzf setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

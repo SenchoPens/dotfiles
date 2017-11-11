@@ -76,3 +76,4 @@ syntax enable
 " Make Y behave like other capitals
 map Y y$
 
+set hid
