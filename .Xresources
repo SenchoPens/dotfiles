@@ -14,9 +14,16 @@ URxvt.keysym.C-M-v:    builtin-string:
 URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
 URxvt.keysym.C-S-0x56: eval:paste_clipboard
 
-! ROFI
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #002b37, #002b37, #003642
+rofi.color-normal: #002b37, #819396, #002b37, #003642, #819396
+rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
+rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
 show-icons: true
-rofi.modi: window,run,ssh,drun
+rofi.modi: drun,window,run,ssh
 
 Xft.dpi: 96
 Xft.antialias: true
