@@ -56,6 +56,13 @@ eval $(thefuck --alias)  # make fuck work
 # rustup completion
 fpath+=~/.zfunc
 
+fpath+=~/.fpath
+# deer
+autoload -U deer
+zle -N deer
+bindkey '\ek' deer
+
+
 # stack completion
 autoload -U +X bashcompinit && bashcompinit
 eval "$(stack --bash-completion-script stack)"
