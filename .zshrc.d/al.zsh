@@ -45,11 +45,16 @@ alias pre='pacaur -Rs'
 alias todo='task add'
 alias rg='ranger'
 
+# exa
+alias exa='exa --group-directories-first'
+# cd with exa
+alias cd='cd_'
+
 # ls
 alias ls='ls --color -h --group-directories-first'
 alias lc='colorls -r -sd'  # ls with icons
 
-# simultanious cd
+# simultaneous cd
 alias ds='pwd > /tmp/cwd'
 alias dr='cd "$(</tmp/cwd)"'
 
@@ -84,4 +89,3 @@ alias -s docx='nonohup libreoffice'
 
 # cpp
 alias comp-ds='g++ -fsanitize=address,undefined -lpthread -x c++ -std=c++14 -O2 -Wall -Werror'
-

@@ -44,6 +44,12 @@ antigen apply
 # fish-like autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# cd
+cd_() {
+  cd $@
+  ls
+}
+
 for script in ~/.zshrc.d/*.zsh; do
   source $script
 done
