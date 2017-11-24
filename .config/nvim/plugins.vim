@@ -13,6 +13,8 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('roxma/nvim-completion-manager')
   call dein#add('eagletmt/neco-ghc')
   call dein#add('zchee/deoplete-clang')
+  call dein#add('eagletmt/ghcmod-vim')
+  call dein#add('metakirby5/codi.vim')
 
   call dein#add('icymind/NeoSolarized')
   call dein#add('kassio/neoterm')

@@ -147,3 +147,7 @@ winformat() {
   sudo mkfs -t vfat $1
 }
 
+
+cheatsheet() {
+  curl "http://cheat.sh/$1"
+}
