@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 15,
 
     // font family with optional fallbacks
-    fontFamily: '"Nerd Font DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"DejaVuSansMono Nerd Font", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -97,7 +97,7 @@ module.exports = {
     bell: false,
 
     // if true, selected text will automatically be copied to the clipboard
-    copyOnSelect: false
+    copyOnSelect: false,
 
     // if true, on right click selected text will be copied or pasted if no
     // selection is present (true by default on Windows)
@@ -107,6 +107,9 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+    hyperCommandGifs: {
+      disabledCommands: []
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -115,9 +118,13 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyperpower",
-            "hyperminimal",
-            "gitrocket"],
+  plugins: [
+    "hyperminimal",
+    "gitrocket",
+    "hyper-command-gifs",
+    // "hypernasa",  // nasa picture of day
+    "hyper-solarized-dark",
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
