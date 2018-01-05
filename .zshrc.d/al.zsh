@@ -60,8 +60,9 @@ alias dr='cd "$(</tmp/cwd)"'
 
 # yadm (git for dotfiles)
 alias ycam='yadm commit -am'
+alias ycmsg='yadm commit -m'
 alias ya='yadm add'
-alias yapu='yadm push'
+alias yp='yadm push'
 alias yapul='yadm pull'
 alias yst='yadm status'
 
