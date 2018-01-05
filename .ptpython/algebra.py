@@ -1,6 +1,7 @@
 import numpy as np
 from sympy import *
 
+
 init_printing()
 
 x = Symbol('x', real=True)
@@ -33,15 +34,6 @@ def draw_table(f, x0, rad):
     _draw_table(xs, ys)
 
 
-class Polynomial:
-    def __init__(self, *args):
-        self.coeffs = args
-        self.power = len(args) - 1
-
-    def __call__(self, x):
-        return sum(k * x ** (power - i) for i, k in enumerate(args))
-
-
 def generate_reverse(*args, a=1):
     f = Polynomial(*args)
 
@@ -62,7 +54,7 @@ def sse(a, b, c):
 
 
 def dce(a, b, c, d, rad=4):
-    '''Help draw a cubic plot'''
+    '''Help to draw a cubic plot'''
     x_bias = b / (3 * a)
     print('f(x) -> g(x + b / 3a)\n'
           '              ||\n'
@@ -82,6 +74,22 @@ def dce(a, b, c, d, rad=4):
     x0 = -x_bias
 
     f = generate_f(a, b, c, d)
-    
-
     return f
+
+
+def rest_squared(p):
+    rests = set()
+    for i in range(p):
+        rests.add((i ** 2) % p)
+    return rests
+
+
+def find_cycle(n, p, max_length=10):
+    rests = set()
+    for i in range(1, max_length + 1):
+        x = n ** i
+        if (x % p) in rests:
+            return i
+        rests.add(x % p)
+        print(i, x, x % p, sep='|')
+
