@@ -21,6 +21,10 @@ nonohup() {
   nohup $@ >/dev/null 2>&1 &
 }
 
+hs() {
+  hoogle search --count=10000 $1 | less
+}
+
 start_pma() {
   # Start PhpMyAdmin - start nessesary services and open phpMyAdmin in firefox.
   systemctl start mysql
