@@ -14,14 +14,16 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('eagletmt/neco-ghc')  " Completer for Haskell
   call dein#add('zchee/deoplete-clang')
   "call dein#add('eagletmt/ghcmod-vim')  " It's overhead for me
+  call dein#add('parsonsmatt/intero-neovim')  " Fork of ghcmod-vim for neovim
   call dein#add('metakirby5/codi.vim')  " Interactive scratchpad
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 
   call dein#add('icymind/NeoSolarized')
   call dein#add('kassio/neoterm')
   call dein#add('w0rp/ale')
 
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('xuyuanp/nerdtree-git-plugin')
+  "call dein#add('scrooloose/nerdtree')          " Don't need 'em anymore
+  "call dein#add('xuyuanp/nerdtree-git-plugin')  " They slow startup time
   call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('scrooloose/nerdcommenter')
@@ -85,12 +87,13 @@ let g:neoterm_keep_term_open = 0
 let g:ale_fixers = {
 \   'python': ['isort'],
 \   'md': ['proselint'],
-\   'js': ['eslint']
+\   'js': ['eslint'],
+\   'haskell': ['hfmt'],
 \}
 
 let g:ale_linters = {
 \   'cpp': ['clangtidy', 'cppcheck', 'cpplint', 'clang-format'],
-\   'haskell': ['ghc-mod', 'stack-ghc-mod', 'hlint', 'hdevtools', 'hfmt'],
+\   'haskell': ['ghc-mod', 'stack-ghc-mod', 'hlint', 'hdevtools'],
 \   'javascript': [],
 \   'python': ['pylint'],
 \}
@@ -104,12 +107,15 @@ nmap <silent> <C-n> <Plug>(ale_next_wrap)
 
 let g:ale_sign_column_always = 1
 
+" Intero
+let g:intero_start_immediately = 0
+
 " NerdTree
-autocmd vimenter * NERDTree  " autload nerdtree
-autocmd vimenter * wincmd p
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " autoclose nerdtree if it the only one left
-" This will enable NERDTree to show hidden files
-let NERDTreeShowHidden=1
+"autocmd vimenter * NERDTree  " autload nerdtree
+"autocmd vimenter * wincmd p
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " autoclose nerdtree if it the only one left
+"" This will enable NERDTree to show hidden files
+"let NERDTreeShowHidden=1
 
 " FZF
 nnoremap <leader>ls :Buffers<CR>
