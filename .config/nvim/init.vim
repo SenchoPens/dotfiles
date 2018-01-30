@@ -76,4 +76,8 @@ syntax enable
 " Make Y behave like other capitals
 map Y y$
 
+" Do not continue comments
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Do not close the buffer when changing them
 set hid
