@@ -9,12 +9,16 @@ alias spip2='sudo pip2'
 alias wf='sudo wifi-menu'
 
 # Hashes
-hash -d pproj=~/Projects
+hash -d proj=~/Projects
 hash -d i3conf=$I3CONFDIR
 hash -d viconf=~/.config/nvim
 hash -d amusic=/media/mtp/sdcard1/Music
 hash -d zrc=~/.zshrc.d
 hash -d ins=~/.installer.sh
+
+hash -d go=~/Projects/go
+hash -d gos=~/Projects/go/src
+hash -d gob=~/Projects/go/bin
 
 # Words translation and definition
 alias ten='trans :en'
@@ -47,8 +51,6 @@ alias rg='ranger'
 
 # exa
 alias exa='exa --group-directories-first'
-# cd with exa
-alias cd='cd_'
 
 # ls
 alias ls='ls --color -h --group-directories-first'
@@ -90,3 +92,7 @@ alias -s docx='nonohup libreoffice'
 
 # cpp
 alias comp-ds='g++ -fsanitize=address,undefined -lpthread -x c++ -std=c++14 -O2 -Wall -Werror'
+
+# Kindle
+# Convert manga files to kindle (high-quality)
+alias comic2kindle='sudo kcc-c2e --manga-style --hq --profile=K578 --format=MOBI --upscale'

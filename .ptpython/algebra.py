@@ -93,3 +93,8 @@ def find_cycle(n, p, max_length=10):
         rests.add(x % p)
         print(i, x, x % p, sep='|')
 
+""" ASTRO """
+
+def lambdafrom(d, m=0, s=0):
+    seconds = 60 * 4 * d + 4 * m
+    return seconds // 3600, seconds % 3600 // 60, seconds % 60

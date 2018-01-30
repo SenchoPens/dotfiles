@@ -125,4 +125,4 @@ nnoremap <leader>f :Files<CR>
 let g:gitgutter_override_sign_column_highlight = 0
 
 " Markdown Preview
-let g:instant_markdown_autostart = 0
+let g:instant_markdown_autostart = 1

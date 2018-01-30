@@ -32,6 +32,7 @@ antigen bundle taskwarrior
 antigen bundle web-search
 antigen bundle cabal
 antigen bundle vi-mode
+antigen bundle golang
 
 antigen bundle zsh-users/zsh-syntax-highlighting  # Syntax highlighting bundle
 antigen bundle chrissicool/zsh-256color  # 256 color
@@ -43,12 +44,6 @@ antigen apply
 
 # fish-like autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# cd
-cd_() {
-  cd $@
-  ls
-}
 
 for script in ~/.zshrc.d/*.zsh; do
   source $script
@@ -68,6 +63,7 @@ autoload -U deer
 zle -N deer
 bindkey '\ek' deer
 
+chpwd_functions=(ls)
 
 # stack completion
 autoload -U +X bashcompinit && bashcompinit
