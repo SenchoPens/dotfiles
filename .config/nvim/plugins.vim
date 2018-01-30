@@ -19,6 +19,7 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('icymind/NeoSolarized')
   call dein#add('kassio/neoterm')
   call dein#add('w0rp/ale')
+  "call dein#add('Shougo/vimproc.vim')
 
   call dein#add('scrooloose/nerdtree')
   call dein#add('xuyuanp/nerdtree-git-plugin')
