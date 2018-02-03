@@ -66,8 +66,9 @@ bindkey '\ek' deer
 chpwd_functions=(ls)
 
 # stack completion
-autoload -U +X bashcompinit && bashcompinit
-eval "$(stack --bash-completion-script stack)"
+# this loads slowly (for some reason), so I disabled it
+#autoload -U +X bashcompinit && bashcompinit
+#eval "$(stack --bash-completion-script stack)"
 
 # fzf setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
