@@ -1,7 +1,7 @@
 DEFAULT_USER=sencho  # Hide name in prompt
 
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=20000
+SAVEHIST=20000
 setopt autocd beep extendedglob
 zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
