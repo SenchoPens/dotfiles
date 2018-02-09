@@ -66,8 +66,16 @@ bindkey '\ek' deer
 chpwd_functions=(ls)
 
 # stack completion
-autoload -U +X bashcompinit && bashcompinit
-eval "$(stack --bash-completion-script stack)"
+# this loads slowly (for some reason), so I disabled it
+#autoload -U +X bashcompinit && bashcompinit
+#eval "$(stack --bash-completion-script stack)"
 
 # fzf setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# NVM
+source /usr/share/nvm/init-nvm.sh
+[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/nvm.sh
+source /usr/share/nvm/bash_completion
+source /usr/share/nvm/install-nvm-exec

@@ -148,13 +148,3 @@ winformat() {
 cheatsheet() {
   curl "http://cheat.sh/$1"
 }
-
-berserk2kindle() {
-  kindle
-  cd ~/Papers
-  for v in $@; do
-    comic2kindle Berserk/BERSERK\ vol."$v"* -o BerserkMobiHQ
-    sudo cp BerserkMobiHQ/BERSERK\ vol.$v.mobi /mnt/documents/
-  done
-  ukindle
-} 
