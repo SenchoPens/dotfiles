@@ -1,7 +1,6 @@
 import numpy as np
 from sympy import *
 
-
 init_printing()
 
 x = Symbol('x', real=True)
@@ -92,6 +91,14 @@ def find_cycle(n, p, max_length=10):
             return i
         rests.add(x % p)
         print(i, x, x % p, sep='|')
+
+
+def make_pascal_triangle(number_of_rows=10):
+    triangle = []
+    for i in range(number_of_rows):
+        triangle.append([binomial(i, j) for j in range(i + 1)])
+    return triangle
+
 
 """ ASTRO """
 
