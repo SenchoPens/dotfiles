@@ -341,6 +341,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq-default
    exec-path-from-shell-arguments ""
    hindent-reformat-buffer-on-save t
+   git-magit-status-fullscreen t
    )
   )
 
@@ -358,12 +359,17 @@ you should place your code here."
   ;; :post-config
   ;; (spacemacs/set-leader-keys-for-major-mode 'haskell-mode
   ;;   "'" 'hindent-reformat-buffer))
+  (setq
+   magit-repository-directories '("~/Projects/")
+   )
   (spacemacs/toggle-evil-cleverparens-on)
 
   (require 'haskell)
-
   (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
   ;; (add-hook 'haskell-mode-hook 'haskell-process-load-or-reload)
+
+  (require 'magit-gitflow)
+  (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
