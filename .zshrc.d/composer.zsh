@@ -28,6 +28,10 @@ composer-deploy() {
                          --archiveFile $2 --file networkadmin.card
 }
 
+composer-update() {
+  composer network update --card "admin@$COMPOSER_NETWORK_NAME" --archiveFile $1
+}
+
 composer-install-runtime() {
   composer runtime install --card PeerAdmin@hlfv1 --businessNetworkName $COMPOSER_NETWORK_NAME
 }
