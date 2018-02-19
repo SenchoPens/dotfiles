@@ -1,5 +1,3 @@
-alias composer-compile='composer archive create --sourceType dir --sourceName .'
-
 composer-help() {
   echo 'To start, you need to set $FABRIC_TOOLS to the path of the fabric-tools repo and $COMPOSER_NETWORK_NAME to the name of the network you are currently building. You can put that in your .profile.
 Functions:
@@ -11,6 +9,8 @@ Functions:
         composer-ping - to check if network is still running
         '
 }
+
+alias composer-compile='composer archive create --sourceType dir --sourceName .'
 
 fabric-start() {
   sh "$FABRIC_TOOLS/startFabric.sh"
