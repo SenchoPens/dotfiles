@@ -95,4 +95,4 @@ alias comp-ds='g++ -fsanitize=address,undefined -lpthread -x c++ -std=c++14 -O2 
 
 # Kindle
 # Convert manga files to kindle (high-quality)
-alias comic2kindle='sudo kcc-c2e --manga-style --hq --profile=K578 --format=MOBI --upscale'
+alias comic2kindle='sudo kcc-c2e --manga-style --splitter=1 --hq --profile=K578 --format=MOBI --upscale'
