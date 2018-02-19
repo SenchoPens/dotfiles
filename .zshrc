@@ -33,6 +33,7 @@ antigen bundle web-search
 antigen bundle cabal
 antigen bundle vi-mode
 antigen bundle golang
+antigen bundle git-flow
 
 antigen bundle zsh-users/zsh-syntax-highlighting  # Syntax highlighting bundle
 antigen bundle chrissicool/zsh-256color  # 256 color
