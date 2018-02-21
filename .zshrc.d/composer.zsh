@@ -3,10 +3,13 @@ composer-help() {
 Functions:
         fabric-start - first, if fabric has not started, run 
         fabric-clean - if fabric has already started and runs different network
+
         composer-compile - to compile .bna, run 
         composer-install-runtime - to install .bna to running fabric node
         composer-deploy - to run installed composer network with admin password $1 and .bna $2
         composer-ping - to check if network is still running
+
+        composer-start - full-cycle
         '
 }
 
