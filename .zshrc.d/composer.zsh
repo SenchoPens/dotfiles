@@ -39,3 +39,10 @@ composer-install-runtime() {
 composer-ping() {
   composer network ping --card "admin@$COMPOSER_NETWORK_NAME"
 }
+
+composer-start() {
+  fabric-start
+  composer-install-runtime
+  composer-deploy $1 $2
+  composer-ping
+}
