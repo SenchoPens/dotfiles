@@ -1,7 +1,7 @@
 import numpy as np
 from sympy import *
 
-init_printing()
+init_printing(use_unicode=True)
 
 x = Symbol('x', real=True)
 y = Symbol('y', real=True)
