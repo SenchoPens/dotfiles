@@ -84,6 +84,7 @@ def rest_squared(p):
 
 
 def find_cycle(n, p, max_length=10):
+    '''Find cycle in field of remainders of p'''
     rests = set()
     for i in range(1, max_length + 1):
         x = n ** i
@@ -94,6 +95,7 @@ def find_cycle(n, p, max_length=10):
 
 
 def make_pascal_triangle(number_of_rows=10):
+    '''Make pascal triangle as list of lists'''
     triangle = []
     for i in range(number_of_rows):
         triangle.append([binomial(i, j) for j in range(i + 1)])
