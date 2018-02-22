@@ -100,6 +100,11 @@ def make_pascal_triangle(number_of_rows=10):
     return triangle
 
 
+def es(t):
+    '''Common pipeline: expand expression and then simplify it'''
+    return t.expand().simplify()
+
+
 """ ASTRO """
 
 def lambdafrom(d, m=0, s=0):
