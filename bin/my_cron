@@ -4,17 +4,11 @@ import os
 import subprocess
 import time
 
-import schedule
-
 from pick_wp import pick_wallpaper
 
-
 if __name__ == '__main__':
-    pick_wallpaper(os.environ['WPDIR'])
-    schedule.every(20).minutes.do(lambda: pick_wallpaper(os.environ['WPDIR']))
-
     subprocess.run("battery-monitor.sh")
 
     while True:
-        schedule.run_pending()
+        pick_wallpaper(os.environ['WPDIR'])
         time.sleep(20)
