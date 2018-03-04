@@ -43,6 +43,14 @@ composer-ping() {
   composer network ping --card "admin@$COMPOSER_NETWORK_NAME"
 }
 
+composer-start-rest() {
+  composer-rest-server -c "admin@$COMPOSER_NETWORK_NAME" -p 3001 &
+}
+
+composer-start-multirest() {
+  composer-rest-server -c "admin@$COMPOSER_NETWORK_NAME" -m true
+}
+
 composer-start() {
   fabric-start
   composer-install-runtime
