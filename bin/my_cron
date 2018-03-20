@@ -7,8 +7,9 @@ import time
 from pick_wp import pick_wallpaper
 
 if __name__ == '__main__':
-    subprocess.run("battery-monitor.sh")
+    subprocess.run("battery-monitor.sh &", shell=True)
 
     while True:
         pick_wallpaper(os.environ['WPDIR'])
-        time.sleep(20)
+        print('done')
+        time.sleep(20 * 60)

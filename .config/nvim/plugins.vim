@@ -86,11 +86,11 @@ let g:neoterm_keep_term_open = 0
 
 " ALE
 let g:ale_fixers = {
-\   'python': ['isort'],
 \   'md': ['proselint'],
 \   'js': ['eslint'],
 \   'haskell': ['hfmt'],
 \}
+"\   'python': ['isort'],
 
 let g:ale_linters = {
 \   'cpp': ['clangtidy', 'cppcheck', 'cpplint', 'clang-format'],
