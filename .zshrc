@@ -46,7 +46,7 @@ antigen apply
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 for script in ~/.zshrc.d/*.zsh; do
-  source $script
+  source $script 1>/dev/null
 done
 
 eval $(thefuck --alias)  # make fuck work
