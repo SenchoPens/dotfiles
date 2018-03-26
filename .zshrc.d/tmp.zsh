@@ -4,6 +4,9 @@
 hash -d byfn=~/Projects/fabric-samples/first-network/
 export PATH=$PATH:~/Projects/fabric-samples/bin/
 
+# Iroha
+. ~/Projects/dr-iroha/scripts/set-default-vars.sh
+
 berserk2kindle() {
   kindle
   cd ~/Papers
