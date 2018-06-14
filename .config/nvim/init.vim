@@ -78,6 +78,7 @@ map Y y$
 
 " Do not continue comments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType go setlocal tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
 
 " Do not close the buffer when changing them
 set hid

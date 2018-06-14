@@ -13,6 +13,7 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('roxma/nvim-completion-manager')  " Like deoplete, but better
   call dein#add('eagletmt/neco-ghc')  " Completer for Haskell
   call dein#add('zchee/deoplete-clang')
+  call dein#add('fatih/vim-go')
   "call dein#add('eagletmt/ghcmod-vim')  " It's overhead for me
   call dein#add('parsonsmatt/intero-neovim')  " Fork of ghcmod-vim for neovim
   call dein#add('metakirby5/codi.vim')  " Interactive scratchpad
