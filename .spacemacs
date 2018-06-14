@@ -22,7 +22,7 @@ values."
    ;; (default 'unused)
    dotspacemacs-enable-lazy-installation 'unused
    ;; If non-nil then Spacemacs will ask for confirmation before installing
-   ;; a layer lazily. (default — Function: funcall function &rest arguments)
+   ;; a layer lazily. (default t)
    dotspacemacs-ask-for-lazy-installation t
    ;; If non-nil layers with lazy install support are lazy installed.
    ;; List of additional paths where to look for configuration layers.
@@ -112,6 +112,8 @@ This function is called at the very startup of Spacemacs initialization
 before layers configuration.
 You should not put any user code in there besides modifying the variable
 values."
+  ;; This setq-default sexp is an exhaustive list of all the supported
+  ;; spacemacs settings.
   (setq-default
    ;; If non nil ELPA repositories are contacted via HTTPS whenever it's
    ;; possible. Set it to nil if you have no way to use HTTPS in your
@@ -341,6 +343,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq-default
    exec-path-from-shell-arguments ""
    hindent-reformat-buffer-on-save t
+   git-magit-status-fullscreen t
    )
   )
 
@@ -358,12 +361,17 @@ you should place your code here."
   ;; :post-config
   ;; (spacemacs/set-leader-keys-for-major-mode 'haskell-mode
   ;;   "'" 'hindent-reformat-buffer))
+  (setq
+   magit-repository-directories '("~/Projects/")
+   )
   (spacemacs/toggle-evil-cleverparens-on)
 
   (require 'haskell)
-
   (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
   ;; (add-hook 'haskell-mode-hook 'haskell-process-load-or-reload)
+
+  (require 'magit-gitflow)
+  (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

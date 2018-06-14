@@ -1,7 +1,7 @@
 DEFAULT_USER=sencho  # Hide name in prompt
 
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=20000
+SAVEHIST=20000
 setopt autocd beep extendedglob
 zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
@@ -33,6 +33,7 @@ antigen bundle web-search
 antigen bundle cabal
 antigen bundle vi-mode
 antigen bundle golang
+antigen bundle git-flow
 
 antigen bundle zsh-users/zsh-syntax-highlighting  # Syntax highlighting bundle
 antigen bundle chrissicool/zsh-256color  # 256 color

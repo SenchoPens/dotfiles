@@ -1,8 +1,7 @@
 import numpy as np
 from sympy import *
 
-
-init_printing()
+init_printing(use_unicode=True)
 
 x = Symbol('x', real=True)
 y = Symbol('y', real=True)
@@ -85,6 +84,7 @@ def rest_squared(p):
 
 
 def find_cycle(n, p, max_length=10):
+    '''Find cycle in field of remainders of p'''
     rests = set()
     for i in range(1, max_length + 1):
         x = n ** i
@@ -92,6 +92,20 @@ def find_cycle(n, p, max_length=10):
             return i
         rests.add(x % p)
         print(i, x, x % p, sep='|')
+
+
+def make_pascal_triangle(number_of_rows=10):
+    '''Make pascal triangle as list of lists'''
+    triangle = []
+    for i in range(number_of_rows):
+        triangle.append([binomial(i, j) for j in range(i + 1)])
+    return triangle
+
+
+def es(t):
+    '''Common pipeline: expand expression and then simplify it'''
+    return t.expand().simplify()
+
 
 """ ASTRO """
 

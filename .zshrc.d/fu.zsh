@@ -144,6 +144,12 @@ winformat() {
   sudo mkfs -t vfat $1
 }
 
+mksession() {
+  session_name="$HOME/sessions/$1.sh"
+  touch $session_name
+  tail --lines=500 ~/.zsh_history | cut --delimiter=';' --fields=2 > $session_name
+  $EDITOR $session_name
+}
 
 cheatsheet() {
   curl "http://cheat.sh/$1"
