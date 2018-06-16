@@ -27,7 +27,6 @@ antigen bundle git
 antigen bundle pip
 antigen bundle lol
 antigen bundle suse
-antigen bundle chucknorris
 antigen bundle taskwarrior
 antigen bundle web-search
 antigen bundle cabal
