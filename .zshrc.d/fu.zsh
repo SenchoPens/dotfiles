@@ -10,7 +10,7 @@ seek() {
 }
 
 pse() {
-  pacaur -Ss $1 | less
+  pse-command $@ | less
 }
 
 mkcd() {
@@ -154,3 +154,9 @@ mksession() {
 cheatsheet() {
   curl "http://cheat.sh/$1"
 }
+
+getOS() {
+  . /etc/os-release
+  echo $NAME
+}
+  
