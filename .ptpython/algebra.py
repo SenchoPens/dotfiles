@@ -1,3 +1,7 @@
+import subprocess
+import os
+import urllib
+
 import numpy as np
 from sympy import *
 
@@ -105,6 +109,11 @@ def make_pascal_triangle(number_of_rows=10):
 def es(t):
     '''Common pipeline: expand expression and then simplify it'''
     return t.expand().simplify()
+
+
+def in_gamma(e):
+    print(urllib.parse.quote(str(e)))
+    subprocess.run([os.environ['BROWSER'], 'http://www.sympygamma.com/input/?i=' + urllib.parse.quote(str(e))])
 
 
 """ ASTRO """
