@@ -91,10 +91,11 @@ let g:neoterm_keep_term_open = 0
 
 " ALE
 let g:ale_fixers = {
-\   'python': ['isort'],
 \   'md': ['proselint'],
 \   'js': ['eslint'],
-\   'haskell': ['hfmt'],
+\   'haskell': ['hfmt', 'remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['isort', 'remove_trailing_lines', 'trim_whitespace'],
+\   'go': ['gofmt', 'remove_trailing_lines', 'trim_whitespace'],
 \}
 
 let g:ale_linters = {
