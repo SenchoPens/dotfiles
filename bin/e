@@ -2,23 +2,12 @@
 #vim:filetype=py
 
 import sys
-import pathlib
-import subprocess
+from subprocess import run, PIPE
+from pathlib import Path
 
 
 PREV_FILE = '/tmp/e_file'
 INPUT_FILE = '/tmp/e_input'
-
-
-def read_executable(name):
-    if not name.endswith('.py'):
-        name += '.py'
-    executable = pathlib.Path(name)
-    print(executable)
-    if not executable.exists():
-        print('Not an executable')
-        sys.exit(1)
-    return executable
 
 
 def catch_input():
@@ -29,34 +18,50 @@ def catch_input():
         return
 
 
+def run_executable(executable, test=None):
+    if executable.endswith('.py'):
+        command = ['pypy3', executable]
+    elif executable.endswith('.cpp'):
+        out = '{}.comp'.format(executable.rstrip('.cpp'))
+        command = ['run-c++', out, executable]
+
+    if test != None:
+        input_ = None
+        input_filename = '{}.in'.format(test)
+        if Path(input_filename).exists:
+            input_ = open(input_filename, 'rb').read()
+        output_filename = '{}.out'.format(test)
+        if Path(output_filename).exists:
+            process = run(command, stdout=PIPE, input=input_)
+            run(['/usr/bin/diff', output_filename, '-'], input=process.stdout)
+        else:
+            run(command, input=input_)
+    else:
+        run(command)
+
+    with open(PREV_FILE, 'w') as f:
+        f.write(str(Path(executable).absolute()))
+
+
 def main():
-    command = ['python3']
+    for arg in sys.argv:
+        if arg.startswith('-'):
+            command.append(arg)
+            sys.argv.remove(arg)
 
-    repeat_last_input = False
-    if len(sys.argv) > 1 and sys.argv[1] == 'r':
-        repeat_last_input = True
-        sys.argv.pop(1)
-
-    for arg in (arg for arg in sys.argv if arg.startswith('-')):
-        command.append(arg)
-        sys.argv.remove(arg)
-
-    def run_executable(executable, **kwargs):
-        subprocess.run(command + [executable], **kwargs)
-        with open(PREV_FILE, 'w') as f:
-            f.write(str(executable.absolute()))
-
-    if len(sys.argv) == 1:
+    if len(sys.argv) == 1:  # empty (except for exec name)
         try:
             with open(PREV_FILE) as f:
-                run_executable(read_executable(f.readline()))
+                run_executable(f.readline())
         except FileNotFoundError:
             print('No prev file')
     elif len(sys.argv) == 2:
-        run_executable(read_executable(sys.argv[1]))
+        run_executable(sys.argv[1])
+    elif len(sys.argv) == 3:
+        run_executable(sys.argv[1], sys.argv[2])
     else:
-        run_executable(read_executable(sys.argv[1]), input=open(sys.argv[2], 'rb').read())
+        print('Too many arguments')
 
 
-main()
-
+if __name__ == '__main__':
+    main()

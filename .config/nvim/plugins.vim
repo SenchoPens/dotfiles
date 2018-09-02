@@ -10,9 +10,7 @@ if dein#load_state('/home/sencho/.local/share/dein/')
  
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('roxma/nvim-completion-manager')  " Like deoplete, but better
   call dein#add('eagletmt/neco-ghc')  " Completer for Haskell
-  call dein#add('zchee/deoplete-clang')
   call dein#add('fatih/vim-go')
   "call dein#add('eagletmt/ghcmod-vim')  " It's overhead for me
   call dein#add('parsonsmatt/intero-neovim')  " Fork of ghcmod-vim for neovim
@@ -46,6 +44,12 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('PotatoesMaster/i3-vim-syntax')
   call dein#add('rust-lang/rust.vim')
   " call dein#add('alx741/vim-hindent')  " Does it even work?
+
+  " NCM2
+  call dein#add('ncm2/ncm2')  " Like deoplete, but better
+  call dein#add('roxma/nvim-yarp') " ncm2 requires nvim-yarp
+  call dein#add('ncm2/ncm2-pyclang') " C/C++ support
+  call dein#add('ncm2/ncm2-jedi') " Python support
  
   " Required:
   call dein#end()
@@ -128,3 +132,13 @@ let g:gitgutter_override_sign_column_highlight = 0
 
 " Markdown Preview
 let g:instant_markdown_autostart = 1
+
+" NCM2
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+" :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
+" suppress the annoying 'match x of y', 'The only match' and 'Pattern not
+" found' messages
+set shortmess+=c

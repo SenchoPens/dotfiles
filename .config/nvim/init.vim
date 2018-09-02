@@ -82,3 +82,11 @@ autocmd FileType go setlocal tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
 
 " Do not close the buffer when changing them
 set hid
+
+" Wildmenu
+set wildmenu
+set wildmode=longest:list,full
+
+" C++
+" Path for searching for files, opened by 'gf' command (for headers)
+let &path.="src/include,/usr/include/AL,"
