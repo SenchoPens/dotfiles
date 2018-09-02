@@ -1,11 +1,13 @@
 DEFAULT_USER=sencho  # Hide name in prompt
 
+unsetopt BG_NICE
+
 HISTSIZE=20000
 SAVEHIST=20000
 setopt autocd beep extendedglob
 zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
-compinit
+compinit -u
 
 # Arrow history completion
 autoload -U up-line-or-beginning-search
@@ -27,7 +29,6 @@ antigen bundle git
 antigen bundle pip
 antigen bundle lol
 antigen bundle suse
-antigen bundle chucknorris
 antigen bundle taskwarrior
 antigen bundle web-search
 antigen bundle cabal
@@ -47,7 +48,7 @@ antigen apply
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 for script in ~/.zshrc.d/*.zsh; do
-  source $script
+  source $script 1>/dev/null
 done
 
 eval $(thefuck --alias)  # make fuck work
@@ -75,8 +76,11 @@ chpwd_functions=(ls)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # NVM
-source /usr/share/nvm/init-nvm.sh
-[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/bash_completion
-source /usr/share/nvm/install-nvm-exec
+if [[ -d /usr/share/nvm ]]
+then 
+    source /usr/share/nvm/init-nvm.sh
+    [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+    source /usr/share/nvm/nvm.sh
+    source /usr/share/nvm/bash_completion
+    source /usr/share/nvm/install-nvm-exec
+fi
