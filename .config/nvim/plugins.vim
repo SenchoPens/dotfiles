@@ -88,9 +88,10 @@ let g:neoterm_keep_term_open = 0
 let g:ale_fixers = {
 \   'md': ['proselint'],
 \   'js': ['eslint'],
-\   'haskell': ['hfmt'],
+\   'haskell': ['hfmt', 'remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['isort', 'remove_trailing_lines', 'trim_whitespace'],
+\   'go': ['gofmt', 'remove_trailing_lines', 'trim_whitespace'],
 \}
-"\   'python': ['isort'],
 
 let g:ale_linters = {
 \   'cpp': ['clangtidy', 'cppcheck', 'cpplint', 'clang-format'],

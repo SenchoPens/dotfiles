@@ -81,3 +81,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Do not close the buffer when changing them
 set hid
+
+" Golang
+au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
