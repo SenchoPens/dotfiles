@@ -30,7 +30,9 @@ if dein#load_state('/home/sencho/.local/share/dein/')
 
   call dein#add('airblade/vim-gitgutter')
   call dein#add('severin-lemaignan/vim-minimap')
+
   call dein#add('suan/vim-instant-markdown')  " Markdown preview
+  call dein#add('lervag/vimtex')
 
   call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 }) 
   call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
@@ -140,6 +142,8 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 " :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
 
-" suppress the annoying 'match x of y', 'The only match' and 'Pattern not
-" found' messages
+" suppress the annoying 'match x of y', 'The only match' and 'Pattern not found' messages
 set shortmess+=c
+
+" vimtex
+let g:vimtex_compiler_progname = 'nvr'  " requires installing 'neovim-remote' (from pip3 or repo)

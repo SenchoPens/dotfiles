@@ -15,6 +15,7 @@ hash -d viconf=~/.config/nvim
 hash -d amusic=/media/mtp/sdcard1/Music
 hash -d zrc=~/.zshrc.d
 hash -d ins=~/.installer.sh
+hash -d sch=~/Papers/school
 
 hash -d go=~/Projects/go
 hash -d gos=~/Projects/go/src

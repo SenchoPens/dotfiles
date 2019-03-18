@@ -8,7 +8,7 @@ then
   }
   alias pup='sudo -- sh -c "apt-get update; apt-get upgrade -y; apt-get dist-upgrade -y; apt-get autoremove -y; apt-get autoclean -y"'
   alias pre='sudo apt-get purge --auto-remove'
-elif [[ ($(getOS) == "Manjaro Linux") || ($(getOS) == "Arch Linux") ]]
+elif [[ ($(getOS) == "Manjaro Linux") || ($(getOS) == "Arch Linux") || ($(getOS) == "Antergos Linux") ]]
 then
   # pacaur - a wrapper around AUR
   alias pin='pacaur -S --noedit'
