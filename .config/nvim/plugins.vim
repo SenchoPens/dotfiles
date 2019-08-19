@@ -96,7 +96,7 @@ let g:ale_fixers = {
 \   'md': ['proselint'],
 \   'js': ['eslint'],
 \   'haskell': ['hfmt', 'remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['isort', 'remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['remove_trailing_lines', 'trim_whitespace'],
 \   'go': ['gofmt', 'remove_trailing_lines', 'trim_whitespace'],
 \}
 

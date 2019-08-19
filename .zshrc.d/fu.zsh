@@ -159,4 +159,11 @@ getOS() {
   . /etc/os-release
   echo $NAME
 }
-  
+
+test-py() {
+  cat "$2.in" | python3 $1
+}
+
+test-cpp() {
+  g++ "$1.cpp" && cat "$2.in" | a.out
+}

@@ -43,7 +43,7 @@ set incsearch
 set hlsearch
 
 set tabstop=4
-set shiftwidth=2
+set shiftwidth=4
 set smarttab
 set expandtab
 set smartindent
