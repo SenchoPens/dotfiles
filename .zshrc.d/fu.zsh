@@ -167,3 +167,12 @@ test-py() {
 test-cpp() {
   g++ "$1.cpp" && cat "$2.in" | a.out
 }
+
+export-from-file() {
+  source $1
+  export $(cut -d= -f1 $1)
+}
+
+diff-strings() {
+  diff  <(echo $1 ) <(echo $2)
+}
