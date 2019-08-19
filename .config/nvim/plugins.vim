@@ -16,6 +16,7 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('parsonsmatt/intero-neovim')  " Fork of ghcmod-vim for neovim
   call dein#add('metakirby5/codi.vim')  " Interactive scratchpad
   call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+  call dein#add('octol/vim-cpp-enhanced-highlight')
 
   call dein#add('icymind/NeoSolarized')
   call dein#add('kassio/neoterm')
@@ -105,6 +106,7 @@ let g:ale_linters = {
 \   'haskell': ['ghc-mod', 'stack-ghc-mod', 'hlint', 'hdevtools'],
 \   'javascript': [],
 \   'python': ['pylint'],
+\   'vim': [],
 \}
 "\   'rust': ['rustc'],
 
@@ -147,3 +149,8 @@ set shortmess+=c
 
 " vimtex
 let g:vimtex_compiler_progname = 'nvr'  " requires installing 'neovim-remote' (from pip3 or repo)
+
+" vim.cpp
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1

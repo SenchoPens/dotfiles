@@ -159,4 +159,12 @@ getOS() {
   . /etc/os-release
   echo $NAME
 }
-  
+
+export-from-file() {
+  source $1
+  export $(cut -d= -f1 $1)
+}
+
+diff-strings() {
+  diff  <(echo $1 ) <(echo $2)
+}
