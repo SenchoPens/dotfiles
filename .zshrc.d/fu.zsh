@@ -180,3 +180,11 @@ diff-strings() {
 sync-gdrive() {
     rclone sync -P local-kp:/home/sencho/Shared GDrive:/ 
 }
+
+push-shared() {
+    rclone copy local-kp:/home/sencho/Shared GDrive:/ 
+}
+
+pull-shared() {
+    rclone copy GDrive:/ local-kp:/home/sencho/Shared 
+}
