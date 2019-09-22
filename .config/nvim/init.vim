@@ -81,7 +81,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Language indentation settings
 autocmd FileType go setlocal tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
-autocmd FileType cpp setlocal tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
 
 " Do not close the buffer when changing them
 set hid
