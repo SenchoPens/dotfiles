@@ -186,6 +186,8 @@ stress-test() {
 
         if [[ $difference != "" ]]; then
             echo $difference
+            echo "Test file:"
+            cat "$stress_in.in"
             break
         fi
     done;
