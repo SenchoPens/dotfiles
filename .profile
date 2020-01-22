@@ -1,6 +1,6 @@
 export SHELL=/bin/zsh
 export EDITOR=/usr/bin/nvim
-export PYTHONPATH=$PYTHONPATH:~/Projects/:~/bin/:
+export PYTHONPATH=$PYTHONPATH:~/bin/:
 export I3CONFDIR=~/.config/i3
 export WPDIR=~/Images/Wallpapers/slideshow
 export GOPATH=$HOME/Projects/go
