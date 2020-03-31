@@ -4,6 +4,7 @@ export PYTHONPATH=$PYTHONPATH:~/bin/:
 export I3CONFDIR=~/.config/i3
 export WPDIR=~/Images/Wallpapers/slideshow
 export GOPATH=$HOME/Projects/go
+export GO111MODULE=on
 export PATH=$PATH:~/bin/:$(ruby -e 'print Gem.user_dir')/bin/:~/.cabal/bin/:~/.local/bin/:/opt/sencho/:~/Projects/go/bin/:
 export BROWSER=/usr/bin/firefox
 export PATH=~/.npm-global/bin:$PATH
