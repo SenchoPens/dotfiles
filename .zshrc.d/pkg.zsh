@@ -10,14 +10,14 @@ then
   alias pre='sudo apt-get purge --auto-remove'
 elif [[ ($(getOS) == "Manjaro Linux") || ($(getOS) == "Arch Linux") || ($(getOS) == "Antergos Linux") ]]
 then
-  # pacaur - a wrapper around AUR
-  alias pin='pacaur -S --noedit'
+  # yay - a wrapper around AUR
+  alias pin='yay -S'
   pse-command() { 
-    pacaur -Ss $@ 
+    yay -Ss $@ 
   }
   # Update system
-  alias pup='pacaur -Syu'
+  alias pup='yay -Syu'
   # Remove package and it's dependencies which are not required by any other installed package
-  alias pre='pacaur -Rs'
+  alias pre='yay -Rs'
 fi
 
