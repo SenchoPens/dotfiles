@@ -36,7 +36,7 @@ alias pipin='pip install --user'
 alias pipin2='pip2 install --user'
 alias pipin3='pip3 install --user'
 alias ptpy='ptipython'  # cool console (i)python REPL
-alias ptal='ptpy -i ~/.ptpython/algebra.py'
+alias ptal='ptpy -i ~/.config/ptpython/algebra.py'
 alias jnq='jupyter notebook --browser="qutebrowser"'
 
 # Various
