@@ -23,6 +23,8 @@ class Ph:
     c = 299792458
     lk = 2.4e-12  # Compton's wave length
     m0 = 9.1e-31  # Mass of electron
+    Ic = 1.36 * 1000  # Sun constant
+    G = 6.67 * 10 ** -11  # Gravitation constant
 
 
 def _build_row(var_name, xs, len_):
