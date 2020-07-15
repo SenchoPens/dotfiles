@@ -4,6 +4,7 @@ import urllib
 
 import numpy as np
 from sympy import *
+import scipy.constants as const
 
 init_printing(use_unicode=True)
 
@@ -17,14 +18,17 @@ d = Symbol('d', real=True)
 
 
 # physics constants
+# they are not really needed because of scipy :(
 class Ph:
-    eV = 1.6 * 10 ** -19
-    h = 6.63 * 10 ** -34  # Plank's constant
-    c = 299792458
-    lk = 2.4e-12  # Compton's wave length
+    eV = const.eV  # 1.6 * 10 ** -19
+    h = const.h  # 6.63 * 10 ** -34  # Plank's constant
+    c = const.c  # 299792458
     m0 = 9.1e-31  # Mass of electron
+    lk = const.h / (m0 * c)  # 2.4e-12  # Compton's wave length
     Ic = 1.36 * 1000  # Sun constant
-    G = 6.67 * 10 ** -11  # Gravitation constant
+    G = const.G  # 6.67 * 10 ** -11  # Gravitation constant
+    eps0 = const.epsilon_0  # 1 / (4 * pi * c ** 2) * 10 ** 7
+    pi = const.pi
 
 
 def _build_row(var_name, xs, len_):

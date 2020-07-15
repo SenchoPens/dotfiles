@@ -10,30 +10,26 @@ if dein#load_state('/home/sencho/.local/share/dein/')
  
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('eagletmt/neco-ghc')  " Completer for Haskell
-  call dein#add('fatih/vim-go')
-  "call dein#add('eagletmt/ghcmod-vim')  " It's overhead for me
-  call dein#add('parsonsmatt/intero-neovim')  " Fork of ghcmod-vim for neovim
+  call dein#add('fatih/vim-go', {'on_ft': 'go'})
+  call dein#add('parsonsmatt/intero-neovim', {'on_ft': 'hs'})  " Fork of ghcmod-vim for neovim
   call dein#add('metakirby5/codi.vim')  " Interactive scratchpad
   call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
-  call dein#add('octol/vim-cpp-enhanced-highlight')
+  call dein#add('octol/vim-cpp-enhanced-highlight', {'on_ft': 'cpp'})
 
   call dein#add('icymind/NeoSolarized')
-  call dein#add('kassio/neoterm')
+  "call dein#add('kassio/neoterm')  " Don't need it
   call dein#add('w0rp/ale')
-  "call dein#add('Shougo/vimproc.vim')
 
-  "call dein#add('scrooloose/nerdtree')          " Don't need 'em anymore
-  "call dein#add('xuyuanp/nerdtree-git-plugin')  " They slow startup time
+  call dein#add('scrooloose/nerdtree')          " Don't need 'em anymore
+  call dein#add('xuyuanp/nerdtree-git-plugin')  " They slow startup time, but now they apparently don't
   call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('scrooloose/nerdcommenter')
 
   call dein#add('airblade/vim-gitgutter')
-  call dein#add('severin-lemaignan/vim-minimap')
 
-  call dein#add('suan/vim-instant-markdown')  " Markdown preview
-  call dein#add('lervag/vimtex')
+  call dein#add('suan/vim-instant-markdown', {'on_ft': 'md'})  " Markdown preview
+  call dein#add('lervag/vimtex', {'on_ft': 'tex'})
 
   call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 }) 
   call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
@@ -44,15 +40,15 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   call dein#add('tpope/vim-surround')
   call dein#add('tpope/vim-repeat')
 
-  call dein#add('PotatoesMaster/i3-vim-syntax')
-  call dein#add('rust-lang/rust.vim')
+  call dein#add('PotatoesMaster/i3-vim-syntax', {'on_ft': 'conf'})
+  call dein#add('rust-lang/rust.vim', {'on_ft': 'rust'})
   " call dein#add('alx741/vim-hindent')  " Does it even work?
 
   " NCM2
   call dein#add('ncm2/ncm2')  " Like deoplete, but better
   call dein#add('roxma/nvim-yarp') " ncm2 requires nvim-yarp
-  call dein#add('ncm2/ncm2-pyclang') " C/C++ support
-  call dein#add('ncm2/ncm2-jedi') " Python support
+  call dein#add('ncm2/ncm2-pyclang', {'on_ft': ['cpp', 'c']}) " C/C++ support
+  call dein#add('ncm2/ncm2-jedi', {'on_ft': 'py'}) " Python support
  
   " Required:
   call dein#end()
@@ -122,11 +118,11 @@ let g:ale_sign_column_always = 1
 let g:intero_start_immediately = 0
 
 " NerdTree
-"autocmd vimenter * NERDTree  " autload nerdtree
-"autocmd vimenter * wincmd p
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " autoclose nerdtree if it the only one left
+autocmd vimenter * NERDTree  " autload nerdtree
+autocmd vimenter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " autoclose nerdtree if it the only one left
 "" This will enable NERDTree to show hidden files
-"let NERDTreeShowHidden=1
+let NERDTreeShowHidden=1
 
 " FZF
 nnoremap <leader>ls :Buffers<CR>
