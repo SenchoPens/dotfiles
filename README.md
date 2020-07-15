@@ -8,5 +8,3 @@ Here is my configuration for neovim, zsh (oh-my-zsh), X Keyboard Extension, term
 I have two working solarized configs: for [termite](https://github.com/thestinger/termite) and [kitty](https://github.com/kovidgoyal/kitty/releases). I prefer kitty now because of the better startup time and a fancy word 'GPU' in it's description.
 ## How do I manage them?
 I use and highly recommend [yadm](https://thelocehiliosan.github.io/yadm/) - it is `git` optimized for `~`, to use it just substitute `git` to `yadm` in whatever command you want to run.
-### Why do you bother creating such complicated and ingenious configuration?
-Oh, my young padawan, 2 computers I have. They are called Mike and Bob (after the spirits of Twin Peaks).
