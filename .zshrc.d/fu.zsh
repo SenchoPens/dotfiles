@@ -213,3 +213,7 @@ push-shared() {
 pull-shared() {
     rclone copy GDrive:/ local-kp:/home/sencho/Shared 
 }
+
+ga-and-commit() {
+    git add $2 && git commit -S --signoff -m "$1 $2"
+}

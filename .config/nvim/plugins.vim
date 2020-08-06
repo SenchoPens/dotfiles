@@ -20,15 +20,10 @@ if dein#load_state('/home/sencho/.local/share/dein/')
   "call dein#add('kassio/neoterm')  " Don't need it
   call dein#add('w0rp/ale')
 
-  call dein#add('scrooloose/nerdtree')          " Don't need 'em anymore
-  call dein#add('xuyuanp/nerdtree-git-plugin')  " They slow startup time, but now they apparently don't
-  call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
-  call dein#add('ryanoasis/vim-devicons')
-  call dein#add('scrooloose/nerdcommenter')
-
   call dein#add('airblade/vim-gitgutter')
 
   call dein#add('suan/vim-instant-markdown', {'on_ft': 'md'})  " Markdown preview
+  call dein#add('gu-fan/riv.vim')
   call dein#add('lervag/vimtex', {'on_ft': 'tex'})
 
   call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 }) 
@@ -42,6 +37,8 @@ if dein#load_state('/home/sencho/.local/share/dein/')
 
   call dein#add('PotatoesMaster/i3-vim-syntax', {'on_ft': 'conf'})
   call dein#add('rust-lang/rust.vim', {'on_ft': 'rust'})
+
+  call dein#add('voldikss/vim-translator')
   " call dein#add('alx741/vim-hindent')  " Does it even work?
 
   " NCM2
@@ -69,7 +66,6 @@ set encoding=utf-8
 
 " Icons
 let g:webdevicons_enable = 1
-let g:webdevicons_enable_nerdtree = 1
 
 " Airline
 let g:airline_powerline_fonts=1
@@ -117,13 +113,6 @@ let g:ale_sign_column_always = 1
 " Intero
 let g:intero_start_immediately = 0
 
-" NerdTree
-autocmd vimenter * NERDTree  " autload nerdtree
-autocmd vimenter * wincmd p
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " autoclose nerdtree if it the only one left
-"" This will enable NERDTree to show hidden files
-let NERDTreeShowHidden=1
-
 " FZF
 nnoremap <leader>ls :Buffers<CR>
 nnoremap <leader>f :Files<CR>
@@ -150,3 +139,18 @@ let g:vimtex_compiler_progname = 'nvr'  " requires installing 'neovim-remote' (f
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
+
+" vim-translator
+let g:translator_target_lang = 'ru'
+let g:translator_source_lang = 'en'
+let g:translator_window_type = 'floatwin'
+
+" Echo translation in the cmdline
+nmap <silent> <Leader>t <Plug>Translate
+vmap <silent> <Leader>t <Plug>TranslateV
+" Display translation in a window
+nmap <silent> <Leader>w <Plug>TranslateW
+vmap <silent> <Leader>w <Plug>TranslateWV
+" Replace the text with translation
+nmap <silent> <Leader>r <Plug>TranslateR
+vmap <silent> <Leader>r <Plug>TranslateRV

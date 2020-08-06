@@ -32,7 +32,6 @@ antigen bundle suse
 antigen bundle taskwarrior
 antigen bundle web-search
 antigen bundle cabal
-antigen bundle vi-mode
 antigen bundle golang
 antigen bundle git-flow
 

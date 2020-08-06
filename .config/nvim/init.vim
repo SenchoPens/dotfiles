@@ -82,6 +82,74 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Language indentation settings
 autocmd FileType go setlocal tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
 
+function ReplaceHyperledger()
+    '<,'>s/a folder/директория/g
+    '<,'>s/to include/, чтобы хранить/g
+
+    '<,'>s/a file/файл/g
+    '<,'>s/ file / файл /g
+
+    '<,'>s/root CA's certificate/корневой CA-сертификат/g
+    '<,'>s/system channel's genesis block/genesis-блок системного канала/g
+
+    '<,'>s/(optional)/(опционально)/g
+    '<,'>s/(Optional)/(Опционально)/g
+    '<,'>s/each corresponding/, каждый из которых соотвествует/g
+
+    '<,'>s/to configure/для настройки/g
+
+    '<,'>s/for the peer/для пира/g
+    '<,'>s/for the orderer/для orderer'a/g
+
+    '<,'>s/An identity should be classified as/Identity должна быть классифицирована как/g
+    '<,'>s/if it/, если он/g
+
+    '<,'>s/needs to contain/должен содержать/g
+
+    '<,'>s/you can find/вы можете найти/g
+    '<,'>s/You can find/Вы можете найти/g
+
+    '<,'>s/Notice that/Заметьте, что/g
+    '<,'>s/is missing/отсутствует/g
+    '<,'>s/than the/, то тогда/g
+
+    '<,'>s/an example/пример/g
+
+    '<,'>s/ administrator / администратор /g
+    '<,'>s/ admin / администратор /g
+
+    '<,'>s/ Instead, / Вместо этого, /g
+
+    '<,'>s/ ledger / реестр /g
+
+    '<,'>s/ reconfiguration / перенастройка /g
+
+    '<,'>s/ peers / пиры /g
+    '<,'>s/ peer / пир /g
+
+    '<,'>s/ certificate / сертификат /g
+    '<,'>s/ Certificate / сертификат /g
+    '<,'>s/ cert / сертификат /g
+
+    '<,'>s/ intermediate / промежуточный /g
+    '<,'>s/ authenticate / аутентифицировать /g
+    '<,'>s/ clients / клиенты /g
+    '<,'>s/ client / клиент /g
+    '<,'>s/ organization / организация /g
+    '<,'>s/ limited / ограниченный /g
+    '<,'>s/ requirement / требование /g
+    '<,'>s/ execute / выполня /g
+    '<,'>s/ execution / выполнение /g
+    '<,'>s/ component / компонент /g
+    '<,'>s/ implementation / реализация /g
+    '<,'>s/ given / данный /g
+    '<,'>s/ classification / классификация /g
+
+    '<,'>s/организацияal unit/organizational unit/g
+
+    '<,'>s/ when / когда /g
+endfunction
+
 " Do not close the buffer when changing them
 set hid
 
